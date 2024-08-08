@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+	<title>Startit</title>
+	<meta charset=utf-8/>
+	
+	<style>
+	  h1 {
+	  color: blue;
+	  }
+	  div {
+	  color: blue;
+	  background-color: lightblue;
+	  padding: 10px;
+	  margin: 10px;
+	  border: solid green 2px;
+	  }
+	  .selected {
+	  border: dashed orange 5px;
+	  }
+	</style>
+    </head>
+    <body>
+      <h1 id="overskrift" class="selected">Hello World !</h1>
+      
+    <div onclick="heiPåDeg(this)">ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+
+    <div onclick="heiPåDeg(this)" class="selected">
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.	
+</div>
+    <div onclick="heiPåDeg(this)">Trykk her</div>
+    <script>
+     var teller = 0;
+     function heiPåDeg(tagElement) {
+	 teller++;
+	 tagElement.innerHTML = 'x';
+	 document.getElmentById('overskrift'.innerHTML =
+	     'Du har trykket ' + teller + ' ganger';
+     }
+    </script>
+    </body>
+</html>
