@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Introduksjon til JavaScript</h3>
+    <ol>
+        <li>Finne frem til en tagg</li>
+        <li>Endre HTML</li>
+        <li>Trekke ut som funksjon</li>
+        <li>kalle andre funksjoner<br /></li>
+    </ol>
+    <h3>Så bruker vi JavaScript til dette</h3>
+    <ol>
+        <li>Åpne og Lukke</li>
+        <li>Velge hode</li>
+    </ol>
+    <div id="geirsTagg">(tom)</div>
+    <button onclick="newText()">Trykk her</button>
+    <script>
+        function newText() {
+            document.getElementById('geirsTagg').innerHTML = 'Ny tekst'
+        }
+    </script>
+</body>
+
+</html>
