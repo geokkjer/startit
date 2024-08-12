@@ -6,7 +6,58 @@
     <title>Hei på deg!</title>
 </head>
 <body>
-    Hei 
-    
+    <div>
+     <button onclick="addHealth()">add health potion</button>
+     <button onclick="delHealth()">delete health potion</button>
+     <button onclick="addMana()">add mana potion</button>
+     <button onclick="delMana()">delete mana potion</button>
+     </div>
+     <div>
+        <div onclick="showHideInventory()">
+            Inventory
+        </div>
+        <div id="inventory">
+        
+        </div>
+     </div>
+     <script>
+        var healthTotal = 0;
+        var manaTotal = 0;
+        var inventoryOpen = Boolean(false);
+        function addHealth() {
+            ++healthTotal 
+            document.getElementById("healthTotal").innerHTML = healthTotal;
+        }
+        function delHealth() {
+            --healthTotal 
+            document.getElementById("healthTotal").innerHTML = healthTotal;
+        }
+        function addMana() {
+            ++manaTotal
+            document.getElementById("manaTotal").innerHTML = manaTotal;
+        }
+        function delMana() {
+            --manaTotal
+            document.getElementById("manaTotal").innerHTML = manaTotal;
+        }
+        function showHideInventory() {
+            if (inventoryOpen != true) {
+                document.getElementById('inventory').innerHTML = /*HTML*/ `
+                <div>Health<div id="healthTotal"></div>
+                Mana<div id="manaTotal"></div>
+                </div>`;
+                document.getElementById("manaTotal").innerHTML = manaTotal;
+                document.getElementById("healthTotal").innerHTML = healthTotal;
+                inventoryOpen = true;
+            } else {
+                blankAll()
+                inventoryOpen = false;
+            }
+        }
+        function blankAll() {
+            document.getElementById('inventory').innerHTML = '';
+        }
+
+     </script>
 </body>
 </html>
