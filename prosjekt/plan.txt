@@ -1,0 +1,11 @@
+Datasenter kluster platform/frontend for hjemme lab
+
+nøkkeltek:
+    * guix/nix
+    * k8s
+    * incus
+    * libvirt
+
+agent - clustering - go
+frontend/web og cli - 
+middleware - bash nix guile

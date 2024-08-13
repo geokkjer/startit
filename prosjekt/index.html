@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super cool project for homelabers</title>
+    <style>
+        div.main {
+            display: grid;
+            grid-template-columns:
+                "sidebar topbar topbar"
+                "sidebar main"
+                "sidebar footer footer";
+        }
+        .item-a {
+            grid-area: sidebar;
+        }
+        .item-b {
+            grid-area: topbar;
+        }
+        .item-c{
+            grid-area: main;
+        }
+        .item-d{
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+    </div>
+</body>
+
+</html>
