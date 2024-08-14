@@ -6,6 +6,6 @@ nøkkeltek:
     * incus
     * libvirt
 
-agent - clustering - go
-frontend/web og cli - 
+agent - clustering - go/rust eller guile
+frontend/web og cli - go
 middleware - bash nix guile

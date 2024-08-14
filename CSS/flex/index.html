@@ -9,13 +9,14 @@
         div.main {
             background-color: transparent;
             border-bottom: none;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             align-items: center;
         }
 
         div {
+            flex-grow: 1;
             background-color: lightblue;
             border-bottom: 1px solid black;
         }
@@ -30,7 +31,7 @@
         <div>
             <h2>Verden!</h2>
         </div>
-        <div>Aaaaa aaaa 
+        <div>Aaaaa aaaa<br>
              aaaa aaaa
         </div>
         <div>Bbbbb bbbb bbbb bbbb</div>
@@ -39,7 +40,7 @@
         <div>
             <p>Sint exercitation est duis proident velit duis cupidatat ex aliqua eu.
                 Mollit tempor velit est occaecat laboris mollit dolore laborum id.
-                Sunt dolore mollit ex laboris veniam eu incididunt culpa.</p>
+                Sunt dolore mollit <br> ex laboris veniam eu incididunt culpa.</p>
         </div>
 
         <div>
