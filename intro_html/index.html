@@ -15,43 +15,26 @@
     <button>Grid layout</button>
 
     <h1>Eksempel 1</h1>
-<div id="tekstDiv">Start Tekst Her</div>
-    <button onclick="oppdaterTekst()">Trykk på knappen for å oppdatere tekst</button>
     <div id="cards">
         <div class="card">
-            <div class="header green">
+            <div class="header green" onclick="green()">
                 Verktøy
             </div>
         </div>
     </div>
     <div class="card">
-        <div class="innerCard">
-            De to viktigste verktøyene vi skal bruke er disse:
-            <ul>
-                <li>
-                    Koderedigeringsprogrammet <a href="https://code.visualstudio.com/">Visual Studio Code</a>
-                    <br>
-                    Vi skal bruke noen <i>extensions</i>:
-                    <ul>
-                        <li>JavaScript-booster</li>
-                        <li>es6-string-html</li>
-                        <li>live-server</li>
-                        <li>live-share</li>
-                    </ul>
-                </li>
-                <li>Nettleseren <a href="https://www.google.com/intl/no/chrome/">Chrome</a></li>
-            </ul>
+        <div class="innerCard" id="inner">
         </div>
     </div>
     <div id="cards">
         <div class="card">
-            <div class="header blue">
+            <div class="header blue" onclick="blue()">
                 HTML
             </div>
         </div>
     </div>
     <div class="card">
-        <div class="innerCard">
+        <div class="innerCard" id="inner">
             Vi bruker HTML til å definere et dokument.
             <ul>
                 <li>Tagger for grunnleggende oppsett av en HTML-fil</li>
@@ -74,7 +57,7 @@
         </div>
     </div>
     <div class="card">
-        <div class="innerCard">
+        <div class="innerCard" id="inner">
             Vi bruker CSS til å <i>style</i> et dokument, altså farger, fonter, utseende og lignende.
             <ul>
                 <li><tt>background-color</tt></li>
@@ -95,12 +78,12 @@
     </div>
     <div id="cards">
         <div class="card">
-            <div class="header yellow">
+            <div class="header yellow" onclick="openClose()">
                 JavaScript
             </div>
         </div>
         <div class="card">
-            <div class="innerCard">
+            <div class="innerCard" id="inner">
                 Det viktigste vi skal lære er programmeringsspråket JavaScript. Vi skal lære grunnleggende programmering
                 ved
                 å manipulere HTML- og CSS-kode på en nettside ved hjelp av JavaScript.

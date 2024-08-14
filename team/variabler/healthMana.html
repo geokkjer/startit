@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hei på deg!</title>
+    <title>Health og Mana</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            border: 10px solid greenyellow;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 10vh;
+
+        }
+        .header{
+            border: 10px solid grey;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-size: x-large;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="header">Add or delete potions from inventory</div>
+    <div class="container">
      <button onclick="addHealth()">add health potion</button>
      <button onclick="delHealth()">delete health potion</button>
      <button onclick="addMana()">add mana potion</button>
@@ -14,7 +34,7 @@
      </div>
      <div>
         <div onclick="showHideInventory()">
-            Inventory
+            <div class="header">Inventory</div>
         </div>
         <div id="inventory">
         
@@ -43,7 +63,7 @@
         function showHideInventory() {
             if (inventoryOpen != true) {
                 document.getElementById('inventory').innerHTML = /*HTML*/ `
-                <div>Health<div id="healthTotal"></div>
+                <div class="container">Health<div id="healthTotal"></div>
                 Mana<div id="manaTotal"></div>
                 </div>`;
                 document.getElementById("manaTotal").innerHTML = manaTotal;

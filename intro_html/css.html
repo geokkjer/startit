@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div.page{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: "header header """"";
+        }
+        div.header {
+            background-color: aquamarine;
+            grid-area: header;
+        }
+
+        div.menu {
+            background-color: brown;
+            grid-area: menu;
+        }
+
+        div.mainContent {
+            background-color: coral;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background-color: crimson;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="mainContent">MainContent</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>

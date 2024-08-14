@@ -32,7 +32,7 @@
             <h2>Verden!</h2>
         </div>
         <div>Aaaaa aaaa<br>
-             aaaa aaaa
+            aaaa aaaa
         </div>
         <div>Bbbbb bbbb bbbb bbbb</div>
         <div>Aaaaa aaaa aaaa aaaa</div>
@@ -55,6 +55,11 @@
         <div>Aaaaa aaaa aaaa aaaa</div>
         <div>Bbbbb bbbb bbbb bbbb</div>
     </div>
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <!-- have a button POST a click via AJAX -->
+    <button hx-post="/clicked" hx-swap="outerHTML">
+        Click Me
+    </button>
     <script>
 
     </script>

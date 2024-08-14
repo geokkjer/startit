@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Oppgave2</title>
+</head>
+<style>
+    div.InvSelect {
+        color: white;
+        background-color: rgb(73, 162, 76);
+        border: 6px white;
+        text-align: center;
+        padding: 6px;
+        user-select: none;
+    }
+    div.Inv{
+      background-color:lightgrey;
+      background: rgb(182, 182, 182);
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);  
+    }
+    button.mana {
+        background-color: rgb(0, 119, 255);
+        font-size: medium;
+        color: white;
+        
+    }
+    button.health {
+        background-color: rgba(255, 0, 0, 0.808);
+        font-size: medium;
+        color: white;
+    }
+    
+</style>
+<body><h1>Gruppe Oppgave the Goats</h1>
+    <div><b>Klikk her for å legge til eller ta vekk</b></div>
+    <button class="health" onclick="addHealth()">Legg til helse flaske</button>
+    <button class="health" onclick="decreaseHealth()">Ta fra helse flaske</button> 
+    <button class="mana" onclick="addMana()">Legg til magi flaske</button>
+    <button class="mana" onclick="decreaseMana()">Ta fra magi flaske</button>
+    <div>
+        <div class="InvSelect" onclick="openClose()">Inventory</div>
+        <div id="showInventory"></div>
+    </div>
+
+</div>
+   <script>
+    var healthTotal = 0;
+    var manaTotal = 0;
+    
+    blankAll()
+    
+    function addHealth() {
+        healthTotal = healthTotal + 1
+        document.getElementById("health").innerHTML = healthTotal;
+    }
+    function addMana(){
+        manaTotal = manaTotal + 1
+        document.getElementById("mana").innerHTML = manaTotal; 
+    }
+
+    function decreaseHealth(){
+        healthTotal = healthTotal - 1
+        document.getElementById("health").innerHTML = healthTotal;
+    }
+    
+    function decreaseMana(){
+        manaTotal = manaTotal - 1
+        document.getElementById("mana").innerHTML = manaTotal;   
+    }
+    
+    
+    function openClose(){
+        document.getElementById("showInventory").innerHTML = /*HTML*/ `
+        <div class="Inv">Total Helse</div>
+        <div class="Inv" id="health"></div>
+        <div class="Inv">Total mana</div>
+        <div class="Inv" id="mana"></div>
+        
+        <button onclick="blankAll()">Close Inventory</button>
+       
+        `;
+    }
+    function blankAll() {
+        document.getElementById("showInventory").innerHTML = ' ';
+    }
+   </script>
+</body>
+</html>
