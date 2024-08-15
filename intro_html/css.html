@@ -13,7 +13,12 @@
         div.page{
             height: 100vh;
             display: grid;
-            grid-template-areas: "header header """"";
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 20px 10fr 20px;
+            grid-template-areas: 
+            'menu header'
+            'menu mainContent'
+            'menu footer';                  ;
         }
         div.header {
             background-color: aquamarine;
@@ -33,6 +38,18 @@
         div.footer {
             background-color: crimson;
             grid-area: footer;
+        }
+        @media only screen and (max-width: 400px) {
+          div.page {
+            grid-template-columns: 1fr;
+            grid-template-rows: 20px 1fr 4fr 20px;
+            grid-template-areas:  
+            'header'
+            'menu'
+            'mainContent'
+            'footer';
+          }  
+
         }
     </style>
 </head>

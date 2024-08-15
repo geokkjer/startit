@@ -7,35 +7,41 @@
     <title>Super cool project for homelabers</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <style>
-        div.main {
+        div.page{
+            height: 100vh;
             display: grid;
-            grid-template-columns:
-                "sidebar topbar topbar"
-                "sidebar main"
-                "sidebar footer footer";
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 20px 10fr 20px;
+            grid-template-areas: 
+            'menu header'
+            'menu mainView'
+            'menu footer';                  ;
         }
-
-        .item-a {
-            grid-area: sidebar;
+        div.header{
+            background-color: aquamarine;
+            grid-area: header;
         }
-
-        .item-b {
-            grid-area: topbar;
+        div.menu{
+            background-color: grey;
+            grid-area: menu;
         }
-
-        .item-c {
-            grid-area: main;
+        div.mainView{
+            background-color: whitesmoke;
+            grid-area: mainView;
         }
-
-        .item-d {
+        div.footer{
+            background-color: black;
             grid-area: footer;
         }
     </style>
 </head>
 
 <body>
-    <div class="main">
-
+    <div class="page">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="mainContent">MainContent</div>
+        <div class="footer">Footer</div>
     </div>
 </body>
 
