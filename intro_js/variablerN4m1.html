@@ -7,8 +7,9 @@
 </head>
 <body>
     <div id="output"></div><br>
-    <button onclick="setNum16(16)">Set Number to 16</button>
-    <button onclick="setNum47(47)">Set Number to 47</button>
+    <button onclick="setNum(16)">Set Number to 16</button>
+    <button onclick="setNum(47)">Set Number to 47</button>
+    <button onclick="increaseNum()">Increase number by 1</button>
     <br><br>
 
     <script>
@@ -17,6 +18,10 @@
 
         function setNum(selectedNum){
             numToShow = selectedNum;
+            outputDiv.innerHTML = numToShow;
+        }
+        function increaseNum(){
+            numToShow++;
             outputDiv.innerHTML = numToShow;
         }
         

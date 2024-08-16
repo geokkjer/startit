@@ -11,15 +11,21 @@
     <div id="app">
     </div>
     <script>
-        add('green', 500, "Det", 'div');
-        add('red', 250, "var", 'h3');
-        add('blue', 600, "en", 'li');
+        let count = 0;
+
+        add('green', 500, "Det", 'span');
+        add('red', 250, "var", 'div');
+        add('blue', 600, "en", 'div');
         add('rgb(200, 200, 42)', 500, "gang", 'span');
         
         function add(color, size, word, tagName) {
+            count++;
             let existingHtml = document.getElementById('app').innerHTML;
             let newHtml =  /*HTML*/ `
-            <${tagName} style="color:${color}; font-size: ${size}%;">${word}</${tagName}>
+            <${tagName} style="color:${color}; font-size: ${size}%;">
+                ${word}
+                ${count}
+            </${tagName}>
             `;
             document.getElementById('app').innerHTML = existingHtml + newHtml ;
         }
