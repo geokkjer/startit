@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvem er jeg ?</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .bilde {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        max-width: 20%;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <div id="page">
+        <div class="header">
+            Geir Okkenhaug Jerstad
+        </div>
+        <div class="bilde"><img src="meg.jpg"></div>
+        <div class="intro">
+            Jeg er rett over 50, bor i Kristiansand og holder på å lære web utvikling.
+            Har god erfaring fra sikkerhet og Linux fra før.
+            Liker Unix/Linux, Emacs, GNU GUIX og fri software.</div><br>
+        <div>På fritiden liker jeg:
+            <ol>
+                <li>å høre på musikk</li>
+                <li>lese bøker </li>
+                <li>sosialt sammvær</li>
+                <li> turer i skog og mark</li>
+            </ol>
+
+        </div>
+        <button onclick="changeBG()">skift bakgrunnsfarge</button>
+    </div>
+    <script>
+        function changeBG() {
+            document.getElementById('page').style.backgroundColor = color();
+        }
+        function color() {
+            let x = Math.floor(Math.random() * 256)
+            let y = Math.floor(Math.random() * 256)
+            let z = Math.floor(Math.random() * 256)
+            return "rgb(" + x + ", " + y + ", " + z + ")";
+        }
+    </script>
+
+</body>
+
+</html>
