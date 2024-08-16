@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope & parameter</title>
+</head>
+<body>
+    <div id="output"></div><br>
+    <button onclick="setNum16(16)">Set Number to 16</button>
+    <button onclick="setNum47(47)">Set Number to 47</button>
+    <br><br>
+
+    <script>
+        var outputDiv = document.getElementById('output');
+        var numToShow = 0;
+
+        function setNum(selectedNum){
+            numToShow = selectedNum;
+            outputDiv.innerHTML = numToShow;
+        }
+        
+    </script>
+</body>
+</html>

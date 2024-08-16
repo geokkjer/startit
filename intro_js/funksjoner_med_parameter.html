@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksjoner med parameter</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">color
+    <div id="minDiv">
+        Hallo innerHTML
+    </div>
+    <button onclick="changeColorAndText('Ny tekst','green', 200, 50 )">Ny tekst</button>
+    <button onclick="blankAll()">reset</button>
+    <button onclick="changeColorAndText('blue', 'blue', 100, 150)">Style</button>
+    <script>
+        function changeColorAndText(text, bcolor, height, width) {
+            document.getElementById('minDiv').innerHTML = /*HTML*/ `
+            <div style="background-color: ${bcolor}; width: ${width}%; height: ${height}px;">${text}</div>
+        `;
+        }
+        function blankAll() {
+            document.getElementById('minDiv').style.background = 'white';
+            document.getElementById('minDiv').innerHTML = '';
+
+        }
+    </script>
+</body>
+
+</html>
