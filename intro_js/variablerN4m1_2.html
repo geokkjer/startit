@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let & var scopes</title>
+</head>
+<body>
+    <script>
+        function testScopes() {
+            var hello = "Var hello";
+            let hello2 = "Let Hello";
+            console.log(hello,hello2);
+            {
+                var yo = "Var yo i obj";
+                let yo2 = "Let yo i obj";
+                console.log(yo, yo2);
+            }
+            console.log(yo);
+        }
+        testScopes();
+    </script>
+</body>
+</html>

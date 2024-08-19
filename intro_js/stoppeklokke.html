@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="page">
+    <div id="header">Stoppeklokke</div>
+    <div id="buttons">
+        <button onclick="myTimer()">Start</button>
+        <button onclick="stopTimer()">Stopp</button>
+        <button onclick="resetTimer()">Rundetid</button>
+    </div>
+    <div id="time"></div><br>
+    <div id="round"></div><br>
+    </div>
+    <script>
+        let time = 1;
+        function myTimer() {
+             setInterval(counter,1000)
+        }
+        
+        function counter() {
+            document.getElementById('time').innerHTML = time;
+            ++time;
+        }
+        function resetTimer() {
+            document.getElementById('round').innerHTML += `<li>${time -1} sekunder</li`;
+            clearInterval(time)
+            time = 0;
+        }
+        function stopTimer(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

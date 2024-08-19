@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <div id="triangle"><ul>#</ul></div>
+    <script>
+        let triangle = "#";
+        function start(){
+            triangle += "#"
+            document.getElementById('triangle').innerHTML += `<ul>${triangle}</ul>`
+            if (document.getElementById('triangle').innerHTML.length() == 5) {
+                console.log('Nice');
+            }
+        }
+    </script>
+</body>
+</html>

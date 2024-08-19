@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bytting av bakgrunnsfarge på nettleser</title>
+    <style>
+        div.bg {
+            width: 100px;
+            height: 20px;
+            border: solid black 1px;
+        }
+
+        .page {
+            padding: 0;
+        }
+
+        .green-bg {
+            background: green;
+        }
+
+        .red-bg {
+            background: red;
+        }
+
+        .blue-bg {
+            background: blue;
+        }
+
+        .white-text {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h2 id="title">Class List</h2>
+
+        <div id="farge1" class="green-bg" onclick="getColor1()">farge1</div>
+        <div id="farge2" class="blue-bg" onclick="getColor2()">farge2</div>
+        <div id="farge3" class="red-bg" onclick="getcolor3()">farge3</div>
+
+        <button onclick="changeBgColor()">Forandre hele bakgrunnen</button>
+
+        <div id="box-1" class="bg" onclick="setColor1()"></div>
+        <div id="box-2" class="bg" onclick="setColor2()"></div>
+    </div>
+    <script>
+        //let bgColor = document.getElementsByClassName();
+        var farge;
+
+        console.log(farge1, farge2, farge3);
+        function getColor1() {
+            farge = document.getElementById('farge1').className;
+        }
+        function getColor2() {
+            farge = document.getElementById('farge2').className;
+            console.log(farge)
+        }
+        function getcolor3() {
+            farge = document.getElementById('farge3').className;
+            console.log(farge)
+        }
+        function setColor1() {
+            document.getElementById('box-1').classList.add(farge);
+            console.log(farge)
+        }
+        function setColor2() {
+            document.getElementById('box-2').classList.add(farge);
+            console.log(farge)
+        }
+        function changeBgColor() {
+            document.getElementById('page').classList.add(farge);
+        }
+
+        // paragraph.classList.add('bold', 'red-bg', 'big-font');
+        // paragraph.classList.remove('bold');
+        // paragraph.classList.replace('big-font', 'white-text');
+
+        // paragraph.classList.toggle('red-bg');
+        // paragraph.classList.toggle('red-bg');
+        // console.log(paragraph.classList.contains('red-bg'));
+        // console.log(paragraph.classList);
+    </script>
+</body>
+
+</html>
