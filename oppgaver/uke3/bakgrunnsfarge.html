@@ -36,8 +36,8 @@
 
 <body>
     <div id="page">
-        <h2 id="title">Class List</h2>
-
+        <h2 id="title">Class</h2>
+        <p>Klikk på farge for å velge, klikk på boks eller knapp for å sette fargen</p>
         <div id="farge1" class="green-bg" onclick="getColor1()">farge1</div>
         <div id="farge2" class="blue-bg" onclick="getColor2()">farge2</div>
         <div id="farge3" class="red-bg" onclick="getcolor3()">farge3</div>
@@ -54,35 +54,27 @@
         console.log(farge1, farge2, farge3);
         function getColor1() {
             farge = document.getElementById('farge1').className;
+            console.log(farge);
         }
         function getColor2() {
             farge = document.getElementById('farge2').className;
-            console.log(farge)
+            console.log(farge);
         }
         function getcolor3() {
             farge = document.getElementById('farge3').className;
-            console.log(farge)
+            console.log(farge);
         }
         function setColor1() {
             document.getElementById('box-1').classList.add(farge);
-            console.log(farge)
+            console.log(farge);
         }
         function setColor2() {
             document.getElementById('box-2').classList.add(farge);
-            console.log(farge)
+            console.log(farge);
         }
         function changeBgColor() {
             document.getElementById('page').classList.add(farge);
         }
-
-        // paragraph.classList.add('bold', 'red-bg', 'big-font');
-        // paragraph.classList.remove('bold');
-        // paragraph.classList.replace('big-font', 'white-text');
-
-        // paragraph.classList.toggle('red-bg');
-        // paragraph.classList.toggle('red-bg');
-        // console.log(paragraph.classList.contains('red-bg'));
-        // console.log(paragraph.classList);
     </script>
 </body>
 
