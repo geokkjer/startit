@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.traffic-lights{
+            display: grid;
+            background-color: black;
+        }
+
+        div.lights{
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="traffic-lights">
+        
+    </div>
+    <script>
+        showGreen();
+        function showGreen(){
+            show('showYellow', 'grey', 'grey','green')
+        };
+        function showYellow(){
+            show('showRed', 'grey', 'yellow', 'grey')
+        };
+        function showRedYellow(){
+            show('showGreen','red','yellow','grey')
+        };
+        function showRed(){
+            show('showRedYellow','red','grey','grey')
+        };
+        function show(onclickFunc ,lamp1, lamp2, lamp3) {
+            document.getElementById('app').innerHTML = /*HTML*/ `
+            <div id="trafficLights" onclick="${onclickFunc}()">
+                ${createLampHtml(lamp1)}
+                ${createLampHtml(lamp2)}
+                ${createLampHtml(lamp3)}
+            </div>
+            `;
+            
+        };
+        function createLampHtml(color){
+            return /*HTML*/ `
+            <div class="lights" style="background-color: ${color};"></div>
+            `;
+        };  
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Navn: <input id="user" type="text">
+    Passord: <input id="pass" type="password">
+    <button onclick="changeText()">Log in</button>
+    <div id="text">Tekst</div>
+
+    <script>
+        
+        function changeText(){
+            var name = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            document.getElementById('text').innerHTML = /*HTML*/`
+                Navn: ${name}
+                Passord: ${pass}
+            `;
+        };
+    </script>
+</body>
+</html>
+
+<!-- 
+Vi ønsker å ta imot informasjon om brukernavn og passord fra en innloggingsside
+Vi ønsker å endre teksten som vises på skjermen etter man har trykt på log in knappen -->

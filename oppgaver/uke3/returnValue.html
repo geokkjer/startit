@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script>
+        document.getElementById('app').innerHTML = createDateSelector();
+        function createDateSelector(){
+            return /*HTML*/`
+            <div class="vertical">
+                    </div>
+            `;
+        };
+        function createNumberSelector(label, day, moth, year){
+            return /*HTML*/`
+            <div class="horizontal">
+                <label>${label}</label>
+                <div class="horizontal border">
+                    <div class="number">${number}</div>
+                    ${createUpDownButton()}
+                </div>
+            </div>
+            `;
+        }
+        function createUpDownButton(){
+            return /*HTML*/ `
+                <div class="vertical">
+                    <button>UP</button>
+                    <button>DOWN</button>
+            `;
+        }; 
+    </script>
+    
+</body>
+</html>
