@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .grey{
+            background-color: grey;
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="pink box" onclick="changeColor(this)"></div>
+    <div class="red box" onclick="changeColor(this)"></div>
+    <div class="blue box" onclick="changeColor(this)"></div>
+    <div class="grey box" id="app">
+        <button onclick="letterPressed(this)">A</button>
+        <button onclick="letterPressed(this)">B</button>
+        <button onclick="letterPressed(this)">C</button>
+        <button onclick="letterPressed(this)">D</button>
+        <button onclick="letterPressed(this)">E</button>
+        <div class="grey box" id="text">Du trykket på <div id="letter">Noe</div></div>
+    </div>
+    <script>
+        function changeColor(element){
+            element.style.backgroundColor = "green";
+            element.innerHTML = "hei";
+        };
+        function letterPressed(letter){
+            let letterPress = letter;
+            console.log('${letterPress}');
+            document.getElementById('letter').innerHTML = `${letterPress}`;
+        }
+    </script>
+</body>
+</html>
