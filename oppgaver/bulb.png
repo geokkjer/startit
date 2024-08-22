@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>Log in to the site | GET-Academy</title>
+    <link rel="shortcut icon" href="https://getacademy.moodlecloud.com/pluginfile.php/1/core_admin/favicon/64x64/1719329072/GET_favicon_RGB-01.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Log in to the site | GET-Academy" />
+<link rel="stylesheet" type="text/css" href="https://getacademy.moodlecloud.com/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://getacademy.moodlecloud.com/theme/styles.php/boost/1719329072_1719329153/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/getacademy.moodlecloud.com","homeurl":{},"sesskey":"Hlhj24dUbJ","sessiontimeout":"14400","sessiontimeoutwarning":1200,"themerev":"1719329072","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1719329072","admin":"admin","svgicons":true,"usertimezone":"Europe\/Oslo","language":"en","courseId":1,"courseContextId":2,"contextid":1,"contextInstanceId":0,"langrev":1,"templaterev":"1719329072","siteId":1};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/getacademy.moodlecloud.com\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/getacademy.moodlecloud.com\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/getacademy.moodlecloud.com\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/getacademy.moodlecloud.com\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/getacademy.moodlecloud.com\/theme\/yui_combo.php?m\/1719329072\/","combine":true,"comboBase":"https:\/\/getacademy.moodlecloud.com\/theme\/yui_combo.php?","ext":false,"root":"m\/1719329072\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_chemistry-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_count-button":{"requires":["io","json-parse","moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/getacademy.moodlecloud.com\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/getacademy.moodlecloud.com\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1719329072\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/getacademy.moodlecloud.com\/lib\/javascript.php\/1719329072\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/getacademy.moodlecloud.com\/lib\/javascript.php\/1719329072\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-login-index" class="format-site  path-login dir-ltr lang-en yui-skin-sam yui3-skin-sam getacademy-moodlecloud-com pagelayout-login course-1 context-1 notloggedin theme ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div id="page-wrapper">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/polyfills/polyfill.js"></script>
+<script src="https://getacademy.moodlecloud.com/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+<div class="eupopup eupopup-container eupopup-container-block eupopup-container-bottom eupopup-block eupopup-style-compact" role="dialog" aria-label="Policies">
+    </div>
+    <div class="eupopup-markup d-none">
+        <div class="eupopup-head"></div>
+        <div class="eupopup-body">
+            If you continue browsing this website, you agree to our policies:
+            <ul>
+                    <li>
+                        <a href=\"https://getacademy.moodlecloud.com/admin/tool/policy/view.php?versionid=1&amp;returnurl=https%3A%2F%2Fgetacademy.moodlecloud.com%2Flogin%2Findex.php data-action="view-guest" data-versionid="1" data-behalfid="1">
+                            Moodle's Privacy Notice
+                        </a>
+                    </li>
+                    <li>
+                        <a href=\"https://getacademy.moodlecloud.com/admin/tool/policy/view.php?versionid=2&amp;returnurl=https%3A%2F%2Fgetacademy.moodlecloud.com%2Flogin%2Findex.php data-action="view-guest" data-versionid="2" data-behalfid="1">
+                            Moodle's Cookies Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href=\"https://getacademy.moodlecloud.com/admin/tool/policy/view.php?versionid=3&amp;returnurl=https%3A%2F%2Fgetacademy.moodlecloud.com%2Flogin%2Findex.php data-action="view-guest" data-versionid="3" data-behalfid="1">
+                            MoodleCloud Terms of Service
+                        </a>
+                    </li>
+            </ul>
+        </div>
+        <div class="eupopup-buttons">
+            <a href="#" class="eupopup-button eupopup-button_1">Continue</a>
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="eupopup-closebutton">x</a>
+    </div>
+
+    <div id="page" class="container-fluid pt-5 mt-0">
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" class="col-12 h-100" aria-label="Content">
+                <div class="login-wrapper">
+                    <div class="login-container">
+                    <div role="main"><span id="maincontent"></span><div class="loginform">
+        <div id="loginlogo" class="login-logo">
+            <img id="logoimage" src="https://getacademy.moodlecloud.com/pluginfile.php/1/core_admin/logo/0x200/1719329072/GET_RGB_logo-01-2.png" class="img-fluid" alt="GET Academy"/>
+            <h1 class="login-heading sr-only">Log in to GET Academy</h1>
+        </div>
+    <form class="login-form" action="https://getacademy.moodlecloud.com/login/index.php" method="post" id="login">
+        <input id="anchor" type="hidden" name="anchor" value="">
+        <script>document.getElementById('anchor').value = location.hash;</script>
+        <input type="hidden" name="logintoken" value="AtKbP3mduXZl0N0NDUA8bU0h7CotiM16">
+        <div class="login-form-username mb-3">
+            <label for="username" class="sr-only">
+                    Username
+            </label>
+            <input type="text" name="username" id="username" class="form-control form-control-lg" value="" placeholder="Username" autocomplete="username">
+        </div>
+        <div class="login-form-password mb-3">
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" id="password" value="" class="form-control form-control-lg" placeholder="Password" autocomplete="current-password">
+        </div>
+        <div class="login-form-submit mb-3">
+            <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">Log in</button>
+        </div>
+        <div class="login-form-forgotpassword mb-3">
+            <a href="https://getacademy.moodlecloud.com/login/forgot_password.php">Lost password?</a>
+        </div>
+    </form>
+    <div class="login-divider"></div>
+    <div class="d-flex">
+            <div class="login-languagemenu">
+                <div class="action-menu moodle-actionmenu" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+                
+                        <div class="menubar d-flex " id="action-menu-0-menubar">
+                
+                            
+                
+                
+                                <div class="action-menu-trigger">
+                                    <div class="dropdown">
+                                        <a
+                                            href="#"
+                                            tabindex="0"
+                                            class=" dropdown-toggle icon-no-margin"
+                                            id="action-menu-toggle-0"
+                                            aria-label="English ‎(en)‎"
+                                            data-toggle="dropdown"
+                                            role="button"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                            aria-controls="action-menu-0-menu"
+                                        >
+                                            
+                                            English ‎(en)‎
+                                                
+                                            <b class="caret"></b>
+                                        </a>
+                                            <div class="dropdown-menu menu dropdown-menu-right" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu">
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=am" class="dropdown-item menu-action" data-lang="am" lang="am" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text"> አማርኛ ‎(am)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=om" class="dropdown-item menu-action" data-lang="om" lang="om" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Afaan Oromoo ‎(om)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=af" class="dropdown-item menu-action" data-lang="af" lang="af" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Afrikaans ‎(af)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=an" class="dropdown-item menu-action" data-lang="an" lang="an" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Aragonés ‎(an)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=oc_es" class="dropdown-item menu-action" data-lang="oc_es" lang="oc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Aranés ‎(oc_es)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ast" class="dropdown-item menu-action" data-lang="ast" lang="es" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Asturianu ‎(ast)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=az" class="dropdown-item menu-action" data-lang="az" lang="az" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Azərbaycanca ‎(az)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=id" class="dropdown-item menu-action" data-lang="id" lang="id" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bahasa Indonesia ‎(id)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ms" class="dropdown-item menu-action" data-lang="ms" lang="ms" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bahasa Melayu ‎(ms)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bar" class="dropdown-item menu-action" data-lang="bar" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bairisch ‎(bar)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bm" class="dropdown-item menu-action" data-lang="bm" lang="bm" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bamanankan ‎(bm)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bi" class="dropdown-item menu-action" data-lang="bi" lang="bi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bislama ‎(bi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bs" class="dropdown-item menu-action" data-lang="bs" lang="bs" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Bosanski ‎(bs)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=br" class="dropdown-item menu-action" data-lang="br" lang="br" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Brezhoneg ‎(br)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ca_wp" class="dropdown-item menu-action" data-lang="ca_wp" lang="ca" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Català ‎(ca_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ca" class="dropdown-item menu-action" data-lang="ca" lang="ca" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Català ‎(ca)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ca_valencia" class="dropdown-item menu-action" data-lang="ca_valencia" lang="ca" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Català (Valencià) ‎(ca_valencia)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=cs" class="dropdown-item menu-action" data-lang="cs" lang="cs" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Čeština ‎(cs)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mis" class="dropdown-item menu-action" data-lang="mis" lang="mi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Crnogorski ‎(mis)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=cy" class="dropdown-item menu-action" data-lang="cy" lang="cy" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Cymraeg ‎(cy)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=da_wp" class="dropdown-item menu-action" data-lang="da_wp" lang="da" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Dansk ‎(da_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=da" class="dropdown-item menu-action" data-lang="da" lang="da" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Dansk ‎(da)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=da_kursus" class="dropdown-item menu-action" data-lang="da_kursus" lang="da" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Dansk (kursus) ‎(da_kursus)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=da_rum" class="dropdown-item menu-action" data-lang="da_rum" lang="da" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Dansk Rum ‎(da_rum)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=se" class="dropdown-item menu-action" data-lang="se" lang="se" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Davvisámegiella ‎(se)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de_ch" class="dropdown-item menu-action" data-lang="de_ch" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch - Schweiz ‎(de_ch)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de_comm" class="dropdown-item menu-action" data-lang="de_comm" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch (community) ‎(de_comm)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de_kids" class="dropdown-item menu-action" data-lang="de_kids" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch ‎(de_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de_wp" class="dropdown-item menu-action" data-lang="de_wp" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch ‎(de_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de" class="dropdown-item menu-action" data-lang="de" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch ‎(de)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=de_du" class="dropdown-item menu-action" data-lang="de_du" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Deutsch (du) ‎(de_du)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=dsb" class="dropdown-item menu-action" data-lang="dsb" lang="de" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Dolnoserbski ‎(dsb)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mh" class="dropdown-item menu-action" data-lang="mh" lang="mh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ebon ‎(mh)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=et" class="dropdown-item menu-action" data-lang="et" lang="et" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">eesti ‎(et)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_ca" class="dropdown-item menu-action" data-lang="en_ca" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English (Canada) ‎(en_ca)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_kids" class="dropdown-item menu-action" data-lang="en_kids" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English ‎(en_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_wp" class="dropdown-item menu-action" data-lang="en_wp" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English ‎(en_wp)‎</span>
+                                        </a>
+                                                                                                <a href="#" class="dropdown-item menu-action" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English ‎(en)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_ar" class="dropdown-item menu-action" data-lang="en_ar" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English (pirate) ‎(en_ar)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_us_wp" class="dropdown-item menu-action" data-lang="en_us_wp" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English (United States) ‎(en_us_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_us" class="dropdown-item menu-action" data-lang="en_us" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English (United States) ‎(en_us)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=en_us_k12" class="dropdown-item menu-action" data-lang="en_us_k12" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English (United States) K12 ‎(en_us_k12)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_ar" class="dropdown-item menu-action" data-lang="es_ar" lang="es-ar" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - Argentina ‎(es_ar)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_co" class="dropdown-item menu-action" data-lang="es_co" lang="es-co" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - Colombia ‎(es_co)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es" class="dropdown-item menu-action" data-lang="es" lang="es" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - Internacional ‎(es)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_mx_kids" class="dropdown-item menu-action" data-lang="es_mx_kids" lang="es-mx" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - México ‎(es_mx_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_mx" class="dropdown-item menu-action" data-lang="es_mx" lang="es-mx" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - México ‎(es_mx)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_ve" class="dropdown-item menu-action" data-lang="es_ve" lang="es-ve" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - Venezuela ‎(es_ve)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=es_wp" class="dropdown-item menu-action" data-lang="es_wp" lang="es" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español ‎(es_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=eo" class="dropdown-item menu-action" data-lang="eo" lang="eo" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Esperanto ‎(eo)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=eu" class="dropdown-item menu-action" data-lang="eu" lang="eu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Euskara ‎(eu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ee" class="dropdown-item menu-action" data-lang="ee" lang="ee" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Èʋegbe ‎(ee)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fil" class="dropdown-item menu-action" data-lang="fil" lang="fil" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Filipino ‎(fil)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sv_fi" class="dropdown-item menu-action" data-lang="sv_fi" lang="sv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Finlandssvenska ‎(sv_fi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fo" class="dropdown-item menu-action" data-lang="fo" lang="fo" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Føroyskt ‎(fo)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fr_ca" class="dropdown-item menu-action" data-lang="fr_ca" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Français (Canada) ‎(fr_ca)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fr_incl" class="dropdown-item menu-action" data-lang="fr_incl" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Français (écriture inclusive) ‎(fr_incl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fr_wp" class="dropdown-item menu-action" data-lang="fr_wp" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Français ‎(fr_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fr" class="dropdown-item menu-action" data-lang="fr" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Français ‎(fr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fr_ca_epi" class="dropdown-item menu-action" data-lang="fr_ca_epi" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Francais Canada – Épicène ‎(fr_ca_epi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ga" class="dropdown-item menu-action" data-lang="ga" lang="ga" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Gaeilge ‎(ga)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=gd" class="dropdown-item menu-action" data-lang="gd" lang="gd" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Gàidhlig ‎(gd)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=gl" class="dropdown-item menu-action" data-lang="gl" lang="gl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Galego ‎(gl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=oc_gsc" class="dropdown-item menu-action" data-lang="oc_gsc" lang="oc_gsc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Gascon ‎(oc_gsc)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ha" class="dropdown-item menu-action" data-lang="ha" lang="ha" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Hausa ‎(ha)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hsb" class="dropdown-item menu-action" data-lang="hsb" lang="po" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Hornjoserbsce ‎(hsb)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hr_schools" class="dropdown-item menu-action" data-lang="hr_schools" lang="hr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Hrvatski ‎(hr_schools)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hr" class="dropdown-item menu-action" data-lang="hr" lang="hr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Hrvatski ‎(hr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=haw" class="dropdown-item menu-action" data-lang="haw" lang="ha" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ʻŌlelo Hawaiʻi ‎(haw)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ig" class="dropdown-item menu-action" data-lang="ig" lang="ig" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Igbo ‎(ig)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ia" class="dropdown-item menu-action" data-lang="ia" lang="ia" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Interlingua ‎(ia)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=xh" class="dropdown-item menu-action" data-lang="xh" lang="xh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">isiXhosa ‎(xh)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zu" class="dropdown-item menu-action" data-lang="zu" lang="zu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">isiZulu ‎(zu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=is" class="dropdown-item menu-action" data-lang="is" lang="is" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Íslenska ‎(is)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=it_wp" class="dropdown-item menu-action" data-lang="it_wp" lang="it" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Italiano ‎(it_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=it" class="dropdown-item menu-action" data-lang="it" lang="it" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Italiano ‎(it)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ja_kids" class="dropdown-item menu-action" data-lang="ja_kids" lang="ja" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Japanese ‎(ja_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kl" class="dropdown-item menu-action" data-lang="kl" lang="da" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kalaallisut ‎(kl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=qxr" class="dropdown-item menu-action" data-lang="qxr" lang="qx" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kichwa - Cañar Highland ‎(qxr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=rw" class="dropdown-item menu-action" data-lang="rw" lang="rw" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kinyarwanda ‎(rw)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sw" class="dropdown-item menu-action" data-lang="sw" lang="sw" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kiswahili ‎(sw)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hat" class="dropdown-item menu-action" data-lang="hat" lang="ht" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kreyòl Ayisyen ‎(hat)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kmr" class="dropdown-item menu-action" data-lang="kmr" lang="ku" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kurmanji ‎(kmr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fkv" class="dropdown-item menu-action" data-lang="fkv" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Kvääni ‎(fkv)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=la" class="dropdown-item menu-action" data-lang="la" lang="la" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Latin ‎(la)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lv_wp" class="dropdown-item menu-action" data-lang="lv_wp" lang="lv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Latviešu ‎(lv_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lv" class="dropdown-item menu-action" data-lang="lv" lang="lv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Latviešu ‎(lv)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lb" class="dropdown-item menu-action" data-lang="lb" lang="lb" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Lëtzebuergesch ‎(lb)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lt_wp" class="dropdown-item menu-action" data-lang="lt_wp" lang="lt" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Lietuvių ‎(lt_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lt" class="dropdown-item menu-action" data-lang="lt" lang="lt" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Lietuvių ‎(lt)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lt_uni" class="dropdown-item menu-action" data-lang="lt_uni" lang="lt" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Lietuvių (universitetas) ‎(lt_uni)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lg" class="dropdown-item menu-action" data-lang="lg" lang="lg" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Luganda ‎(lg)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=smj" class="dropdown-item menu-action" data-lang="smj" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Lulesamisk ‎(smj)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hu" class="dropdown-item menu-action" data-lang="hu" lang="hu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">magyar ‎(hu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mg" class="dropdown-item menu-action" data-lang="mg" lang="mg" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Malagasy ‎(mg)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mi_tn" class="dropdown-item menu-action" data-lang="mi_tn" lang="mi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Māori - Tainui ‎(mi_tn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mi_wwow" class="dropdown-item menu-action" data-lang="mi_wwow" lang="mi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Māori - Waikato ‎(mi_wwow)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mi" class="dropdown-item menu-action" data-lang="mi" lang="mi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Māori Te Reo ‎(mi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=arn" class="dropdown-item menu-action" data-lang="arn" lang="ar" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Mapudungún ‎(arn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mwl" class="dropdown-item menu-action" data-lang="mwl" lang="mwl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Mirandés ‎(mwl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mn_mong" class="dropdown-item menu-action" data-lang="mn_mong" lang="mn" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Mongolian ‎(mn_mong)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=nl_wp" class="dropdown-item menu-action" data-lang="nl_wp" lang="nl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Nederlands ‎(nl_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=nl" class="dropdown-item menu-action" data-lang="nl" lang="nl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Nederlands ‎(nl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=nb" class="dropdown-item menu-action" data-lang="nb" lang="nb" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Norsk - bokmål ‎(nb)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=nn" class="dropdown-item menu-action" data-lang="nn" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Norsk - nynorsk ‎(nn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=no_gr" class="dropdown-item menu-action" data-lang="no_gr" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Norsk ‎(no_gr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=no_wp" class="dropdown-item menu-action" data-lang="no_wp" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Norsk ‎(no_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=no" class="dropdown-item menu-action" data-lang="no" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Norsk ‎(no)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=uz" class="dropdown-item menu-action" data-lang="uz" lang="uz" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">O'zbekcha ‎(uz)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=oc_lnc" class="dropdown-item menu-action" data-lang="oc_lnc" lang="oc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Occitan-Lengadocian ‎(oc_lnc)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pap" class="dropdown-item menu-action" data-lang="pap" lang="pa" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Papiamento ‎(pap)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pcm" class="dropdown-item menu-action" data-lang="pcm" lang="pc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Pidgin ‎(pcm)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pl" class="dropdown-item menu-action" data-lang="pl" lang="pl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Polski ‎(pl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pt_br_wp" class="dropdown-item menu-action" data-lang="pt_br_wp" lang="pt-br" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Português - Brasil ‎(pt_br_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pt_br" class="dropdown-item menu-action" data-lang="pt_br" lang="pt-br" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Português - Brasil ‎(pt_br)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pt" class="dropdown-item menu-action" data-lang="pt" lang="pt" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Português - Portugal ‎(pt)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pt_br_kids" class="dropdown-item menu-action" data-lang="pt_br_kids" lang="pt-br" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Português Brasil ‎(pt_br_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pt_br_uni" class="dropdown-item menu-action" data-lang="pt_br_uni" lang="pt-br" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Português Brasil para Universidades ‎(pt_br_uni)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kaa" class="dropdown-item menu-action" data-lang="kaa" lang="ka" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Qaraqalpaq tili ‎(kaa)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=qu" class="dropdown-item menu-action" data-lang="qu" lang="qu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Quechua ‎(qu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ro_wp" class="dropdown-item menu-action" data-lang="ro_wp" lang="ro" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Română ‎(ro_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ro" class="dropdown-item menu-action" data-lang="ro" lang="ro" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Română ‎(ro)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=rm_surs" class="dropdown-item menu-action" data-lang="rm_surs" lang="rm" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Romansh Sursilvan ‎(rm_surs)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sm" class="dropdown-item menu-action" data-lang="sm" lang="sm" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Samoan ‎(sm)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sa" class="dropdown-item menu-action" data-lang="sa" lang="sa" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Sanskrit ‎(sa)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sc" class="dropdown-item menu-action" data-lang="sc" lang="sc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Sard ‎(sc)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tn" class="dropdown-item menu-action" data-lang="tn" lang="tn" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Setswana ‎(tn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sq" class="dropdown-item menu-action" data-lang="sq" lang="sq" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Shqip ‎(sq)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=scn" class="dropdown-item menu-action" data-lang="scn" lang="sc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Sicilianu ‎(scn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=szl" class="dropdown-item menu-action" data-lang="szl" lang="sz" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ślōnski ‎(szl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sk" class="dropdown-item menu-action" data-lang="sk" lang="sk" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Slovenčina ‎(sk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sl" class="dropdown-item menu-action" data-lang="sl" lang="sl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Slovenščina ‎(sl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=so" class="dropdown-item menu-action" data-lang="so" lang="in" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Soomaali ‎(so)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sma" class="dropdown-item menu-action" data-lang="sma" lang="no" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Sørsamisk ‎(sma)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sr_lt" class="dropdown-item menu-action" data-lang="sr_lt" lang="sr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Srpski ‎(sr_lt)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fi" class="dropdown-item menu-action" data-lang="fi" lang="fi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Suomi ‎(fi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fi_co" class="dropdown-item menu-action" data-lang="fi_co" lang="fi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Suomi+ ‎(fi_co)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sv_wp" class="dropdown-item menu-action" data-lang="sv_wp" lang="sv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Svenska ‎(sv_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sv" class="dropdown-item menu-action" data-lang="sv" lang="sv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Svenska ‎(sv)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tl" class="dropdown-item menu-action" data-lang="tl" lang="tl" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tagalog ‎(tl)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ta" class="dropdown-item menu-action" data-lang="ta" lang="ta" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tamil ‎(ta)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kab" class="dropdown-item menu-action" data-lang="kab" lang="ka" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Taqbaylit ‎(kab)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tet" class="dropdown-item menu-action" data-lang="tet" lang="tet" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tetun Dili ‎(tet)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=th" class="dropdown-item menu-action" data-lang="th" lang="th" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Thai ‎(th)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=xct" class="dropdown-item menu-action" data-lang="xct" lang="xc" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tibetan ‎(xct)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tpi" class="dropdown-item menu-action" data-lang="tpi" lang="tpi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tok Pisin ‎(tpi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=to" class="dropdown-item menu-action" data-lang="to" lang="to" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Tongan ‎(to)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tr" class="dropdown-item menu-action" data-lang="tr" lang="tr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Türkçe ‎(tr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tk" class="dropdown-item menu-action" data-lang="tk" lang="tk" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Turkmen ‎(tk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ug_lt" class="dropdown-item menu-action" data-lang="ug_lt" lang="ug" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Uyghur - latin ‎(ug_lt)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fj" class="dropdown-item menu-action" data-lang="fj" lang="fj" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">VakaViti ‎(fj)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ca_valencia_racv" class="dropdown-item menu-action" data-lang="ca_valencia_racv" lang="ca" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Valencià_RACV ‎(ca_valencia_racv)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=vi" class="dropdown-item menu-action" data-lang="vi" lang="vi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Vietnamese ‎(vi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=wo" class="dropdown-item menu-action" data-lang="wo" lang="fr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Wolof ‎(wo)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zh_cn_wp" class="dropdown-item menu-action" data-lang="zh_cn_wp" lang="zh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Workplace 简体中文版 ‎(zh_cn_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zh_tw_wp" class="dropdown-item menu-action" data-lang="zh_tw_wp" lang="zh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Workplace 繁體中文版 ‎(zh_tw_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ja_wp" class="dropdown-item menu-action" data-lang="ja_wp" lang="ja" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Workplace準拠の日本語 ‎(ja_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=yo" class="dropdown-item menu-action" data-lang="yo" lang="yo" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Yorùbá ‎(yo)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=el_kids" class="dropdown-item menu-action" data-lang="el_kids" lang="el" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ελληνικά ‎(el_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=el_wp" class="dropdown-item menu-action" data-lang="el_wp" lang="el" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ελληνικά ‎(el_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=el" class="dropdown-item menu-action" data-lang="el" lang="el" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ελληνικά ‎(el)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=el_uni" class="dropdown-item menu-action" data-lang="el_uni" lang="el" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Ελληνικά για σχολές ‎(el_uni)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ab" class="dropdown-item menu-action" data-lang="ab" lang="ab" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Аԥсуа бызшәа ‎(ab)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ba" class="dropdown-item menu-action" data-lang="ba" lang="ba" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Башҡорт теле ‎(ba)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=be" class="dropdown-item menu-action" data-lang="be" lang="be" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Беларуская ‎(be)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bg" class="dropdown-item menu-action" data-lang="bg" lang="bg" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Български ‎(bg)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ky" class="dropdown-item menu-action" data-lang="ky" lang="ru" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Кыргызча ‎(ky)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kk" class="dropdown-item menu-action" data-lang="kk" lang="kk" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Қазақша ‎(kk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mk" class="dropdown-item menu-action" data-lang="mk" lang="mk" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Македонски ‎(mk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mn" class="dropdown-item menu-action" data-lang="mn" lang="mn" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Монгол ‎(mn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ru" class="dropdown-item menu-action" data-lang="ru" lang="ru" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Русский ‎(ru)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sr_cr" class="dropdown-item menu-action" data-lang="sr_cr" lang="sr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Српски ‎(sr_cr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tt" class="dropdown-item menu-action" data-lang="tt" lang="tt" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Татар ‎(tt)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=tg" class="dropdown-item menu-action" data-lang="tg" lang="tg" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Тоҷикӣ ‎(tg)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=uk" class="dropdown-item menu-action" data-lang="uk" lang="uk" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Українська ‎(uk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ka" class="dropdown-item menu-action" data-lang="ka" lang="ka" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ქართული ‎(ka)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hy" class="dropdown-item menu-action" data-lang="hy" lang="hy" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Հայերեն ‎(hy)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=he" class="dropdown-item menu-action" data-lang="he" lang="he" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">עברית ‎(he)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=he_kids" class="dropdown-item menu-action" data-lang="he_kids" lang="he" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">עברית בתי־ספר ‎(he_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=he_wp" class="dropdown-item menu-action" data-lang="he_wp" lang="he" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">עברית עבור Workplace ‎(he_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ug_ug" class="dropdown-item menu-action" data-lang="ug_ug" lang="ug" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ئۇيغۇرچە ‎(ug_ug)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ur" class="dropdown-item menu-action" data-lang="ur" lang="ur" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">اردو ‎(ur)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ar" class="dropdown-item menu-action" data-lang="ar" lang="ar" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">العربية ‎(ar)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ar_wp" class="dropdown-item menu-action" data-lang="ar_wp" lang="ar" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">بالعربي workplace ‎(ar_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=prs" class="dropdown-item menu-action" data-lang="prs" lang="fa" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">دری ‎(prs)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=sd_ap" class="dropdown-item menu-action" data-lang="sd_ap" lang="sd" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">سنڌي ‎(sd_ap)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ckb" class="dropdown-item menu-action" data-lang="ckb" lang="ku" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">سۆرانی ‎(ckb)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=fa" class="dropdown-item menu-action" data-lang="fa" lang="fa" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">فارسی ‎(fa)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ps" class="dropdown-item menu-action" data-lang="ps" lang="ps" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">لیسي ‎(ps)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=dv" class="dropdown-item menu-action" data-lang="dv" lang="dv" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ދިވެހި ‎(dv)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zgh" class="dropdown-item menu-action" data-lang="zgh" lang="zg" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ⵜⴰⵎⴰⵣⵉⵖⵜ ‎(zgh)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ti" class="dropdown-item menu-action" data-lang="ti" lang="ti" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ትግርኛ ‎(ti)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ne" class="dropdown-item menu-action" data-lang="ne" lang="ne" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">नेपाली ‎(ne)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=mr" class="dropdown-item menu-action" data-lang="mr" lang="mr" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">मराठी ‎(mr)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hi_wp" class="dropdown-item menu-action" data-lang="hi_wp" lang="hi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">वर्कप्लेस  के लिए  हिंदी ‎(hi_wp)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hi_kids" class="dropdown-item menu-action" data-lang="hi_kids" lang="hi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">हिंदी ‎(hi_kids)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=hi" class="dropdown-item menu-action" data-lang="hi" lang="hi" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">हिंदी ‎(hi)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=bn" class="dropdown-item menu-action" data-lang="bn" lang="bn" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">বাংলা ‎(bn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=pan" class="dropdown-item menu-action" data-lang="pan" lang="pa" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ਪੰਜਾਬੀ ‎(pan)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=gu" class="dropdown-item menu-action" data-lang="gu" lang="gu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ગુજરાતી ‎(gu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=or" class="dropdown-item menu-action" data-lang="or" lang="or" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ଓଡ଼ିଆ ‎(or)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ta_lk" class="dropdown-item menu-action" data-lang="ta_lk" lang="ta" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">தமிழ் ‎(ta_lk)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=te" class="dropdown-item menu-action" data-lang="te" lang="te" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">తెలుగు  ‎(te)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=kn" class="dropdown-item menu-action" data-lang="kn" lang="kn" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ಕನ್ನಡ ‎(kn)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ml" class="dropdown-item menu-action" data-lang="ml" lang="ml" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">മലയാളം ‎(ml)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=si" class="dropdown-item menu-action" data-lang="si" lang="si" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">සිංහල ‎(si)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=lo" class="dropdown-item menu-action" data-lang="lo" lang="lo" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ລາວ ‎(lo)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=dz" class="dropdown-item menu-action" data-lang="dz" lang="dz" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">རྫོང་ཁ ‎(dz)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=my" class="dropdown-item menu-action" data-lang="my" lang="my" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ဗမာစာ ‎(my)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=km" class="dropdown-item menu-action" data-lang="km" lang="km" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ខ្មែរ ‎(km)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=iu" class="dropdown-item menu-action" data-lang="iu" lang="iu" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">ᐃᓄᒃᑎᑐᑦ ‎(iu)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ko" class="dropdown-item menu-action" data-lang="ko" lang="ko" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">한국어 ‎(ko)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=ja" class="dropdown-item menu-action" data-lang="ja" lang="ja" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">日本語 ‎(ja)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zh_tw" class="dropdown-item menu-action" data-lang="zh_tw" lang="zh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">正體中文 ‎(zh_tw)‎</span>
+                                        </a>
+                                                                                                <a href="https://getacademy.moodlecloud.com/login/index.php?lang=zh_cn" class="dropdown-item menu-action" data-lang="zh_cn" lang="zh" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">简体中文 ‎(zh_cn)‎</span>
+                                        </a>
+                                            </div>
+                                    </div>
+                                </div>
+                
+                        </div>
+                
+                </div>
+            </div>
+            <div class="divider border-left align-self-center mx-3"></div>
+        <button type="button" class="btn btn-secondary"  data-modal="alert" data-modal-title-str='["cookiesenabled", "core"]'  data-modal-content-str='["cookiesenabled_help_html", "core"]'>Cookies notice</button>
+    </div>
+</div></div>
+                    </div>
+                </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="page-footer" class="footer-popover bg-white">
+        <div data-region="footer-container-popover">
+            <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                <i class="icon fa fa-question fa-fw " aria-hidden="true"  ></i>
+            </button>
+        </div>
+        <div class="footer-content-popover container" data-region="footer-content-popover">
+                <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+                    ga('create', 'UA-65124233-5', 'auto', 'mcglobal');
+                    ga('create', 'UA-65124233-3', 'auto', 'mcregion');
+    
+                    ga('mcglobal.set', 'dimension1', 'lms_200.0');
+                    ga('mcregion.set', 'dimension1', 'lms_200.0');
+    
+                    ga('mcglobal.send', 'pageview');
+                    ga('mcregion.send', 'pageview');
+                </script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNLPXLX7S6"></script>
+                <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-FNLPXLX7S6');
+                </script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LFSFVW4ZQ"></script>
+                <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-8LFSFVW4ZQ');
+                </script>
+            <div class="footer-section p-3 border-bottom">
+                <div class="logininfo">
+                    <div class="logininfo">You are not logged in.</div>
+                </div>
+                <div class="tool_usertours-resettourcontainer">
+                </div>
+    
+                <div class="tool_dataprivacy"><a href="https://getacademy.moodlecloud.com/admin/tool/dataprivacy/summary.php">Data retention summary</a></div><a class="policiesfooter" href="https://getacademy.moodlecloud.com/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Fgetacademy.moodlecloud.com%2Flogin%2Findex.php">Policies</a><a class="mobilelink" href="https://download.moodle.org/mobile?version=2024042201&amp;lang=en&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Get the mobile app</a>
+                <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://getacademy.moodlecloud.com/lib/requirejs.php/1719329072/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://getacademy.moodlecloud.com/lib/javascript.php/1719329072/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    TeX: { extensions: [\"AMSmath.js\",\"AMSsymbols.js\",\"color.js\",\"mhchem.js\",\"noErrors.js\",\"noUndefined.js\"] },\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});","lang":"en"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+
+        require(['jquery', 'tool_policy/jquery-eu-cookie-law-popup', 'tool_policy/policyactions'], function($, Popup, ActionsMod) {
+            // Initialise the guest popup.
+            $(document).ready(function() {
+                // Initialize popup.
+                $(document.body).addClass('eupopup');
+                if ($(".eupopup").length > 0) {
+                    $(document).euCookieLawPopup().init();
+                }
+
+                // Initialise the JS for the modal window which displays the policy versions.
+                ActionsMod.init('[data-action="view-guest"]');
+            });
+        });
+    ;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+
+        require(['core/togglesensitive'], function(ToggleSensitive) {
+            ToggleSensitive.init("password", 1);
+        });
+    require(['core_form/submit'], function(Submit) {
+        Submit.init("loginbtn");
+    });
+;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?delayStartupUntil=configured"></script>
+<script src="https://getacademy.moodlecloud.com/theme/javascript.php/boost/1719329072/footer"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"Are you sure you want to delete the selected comment(s)?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random66c72a4da79e0217'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random66c72a4da79e0217'); });
+})();
+//]]>
+</script>
+
+            </div>
+            <div class="footer-section p-3">
+                <div>Powered by <a href="https://moodle.com">Moodle</a></div>
+            </div>
+        </div>
+    
+        <div class="footer-content-debugging footer-dark bg-dark text-light">
+            <div class="container-fluid footer-dark-inner">
+                
+            </div>
+        </div>
+    </footer>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-65124233-5', 'auto', 'mcglobal');
+            ga('create', 'UA-65124233-3', 'auto', 'mcregion');
+
+            ga('mcglobal.set', 'dimension1', 'lms_200.0');
+            ga('mcregion.set', 'dimension1', 'lms_200.0');
+
+            ga('mcglobal.send', 'pageview');
+            ga('mcregion.send', 'pageview');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNLPXLX7S6"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FNLPXLX7S6');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LFSFVW4ZQ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8LFSFVW4ZQ');
+        </script>
+</div>
+
+
+</body></html>

@@ -1,94 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>If else else if</title>
     <style>
-        .hungrySetting{
-            height: 20px;
+        .lightBulb {
+            height: 200px;
             width: 200px;
-            background-color: lightgray;
-            cursor: pointer;
+            background-color: grey;
+        }
+
+        img {
+            border-radius: 180px;
+            border-radius: 50%;
         }
     </style>
 </head>
+
 <body>
-    <div class="result" id="resultBox">Result: </div>
-    <div class="hungrySetting" onclick="changeHungrySetting()">Change hungry Status: </div>
-    <div id="hungryText">I'm hungry</div>
-
+    <div class="lightBulb" id="bulb">
+    </div>
+    <button onclick="onOff()">Av/På</button>
     <script>
-        let hungry = true;
-        function changeHungrySetting(){
-            hungry = !hungry; 
-            changeHungryText();
+        let on = false;
+        function onOff() {
+            if (on != true) {
+                document.getElementById('bulb').style.backgroundColor = 'yellow';
+                document.getElementById('bulb').innerHTML = /*HTML*/ `
+                    <img src="https://getacademy.moodlecloud.com/pluginfile.php/5208/mod_label/intro/bulb.png">
+                `
+                on = true;
+            } else {
+                document.getElementById('bulb').style.backgroundColor = 'grey';
+                document.getElementById('bulb').innerHTML = '';
+                on = false;
+            }
         }
-        function changeHungryText(){
-            if (hungry == true){
-                document.getElementById('hungryText').innerHTML = 'I`m hungry'
-            } else {
-                document.getElementById('hungryText').innerHTML = 'I`m not hungry'
-            }
-        };
-        let numberOne = 5;
-        let numberTwo = 23;
-
-        let textNumber = "30";
-
-        check()
-        function check(){
-            OrCheck();
-        };
-        function setTextToTrue() {
-            document.getElementById('resultBox').innerHTML += true;
-        }
-        function setTextToFalse() {
-            document.getElementById('resultBox').innerHTML += false;
-        }
-
-        function NotEqualTo() {
-            if (numberOne != numberTwo){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
-        function EqualTo(){
-            if (numberTwo == textNumber){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
-        function LessThan(){
-            if (numberOne < numberTwo){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
-        function LargerThan(){
-            if (numberOne > numberTwo){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
-        function AndCheck(){
-            if (numberOne < 20 && numberTwo > numberOne){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
-        function OrCheck(){
-            if (numberOne > 50 || numberTwo > numberOne){
-                setTextToTrue();
-            } else {
-                setTextToFalse();
-            }
-        };
     </script>
 </body>
+
 </html>
