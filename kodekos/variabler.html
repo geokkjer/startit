@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="text">
+        Generet: Hvordan opplevde dere denne workshopen? positiv og negativ feedback!
+
+        Fikk jeg noe ut av dette? 
+        Sosialt - kjent med nye, andre perspektiv innsikter?
+    NK - personlig utfordring, samarbeid
+    Ok oppgaver? For lett? For vanskelig? Fjasete?
+    Lærte du noe?
+    Annen feedback?
+    Er det verdt tiden eller hadde du foretrukket å kode alene?
+    </div>
+    <script>
+        showText();
+    function showText() {
+        let name1 = "Terje";
+        let name2 = "Marie"; 
+        let brotherName = "Bjarne";
+        let age = 45;
+        let wearing = "Hawaii skjorte";
+
+        document.getElementById('text').innerHTML = /*HTML*/`
+        ${name1} er født med ski på bena.<br>
+        ${name2} har en bror.<br>
+        Broren til Marie heter ${brotherName}.<br>
+        ${name1} er 45 år gammel.<br>
+        ${name1} har på seg ${wearing}.<br>
+
+        
+        `;
+
+    }
+
+    </script>
+</body>
+</html>
