@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Poeng <span id="points"></span><br>
+    <button onclick="addPoints()">Klikk her</button>
+    <button onclick="upgrade()">Oppgrader</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        let points = 0;
+        let upgrades = 1;
+        function addPoints(){
+            points += upgrades;
+            document.getElementById('points').innerHTML = points;
+        };
+        function upgrade(){
+            upgrades++;
+            points -= 10;
+            document.getElementById('points').innerHTML = points;
+        }
+        function reset(){
+            points = 0;
+            upgrades = 1;
+        }
+    </script>
+</body>
+</html>

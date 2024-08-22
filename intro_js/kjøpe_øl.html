@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mannen var ute etter øl</title>
+</head>
+
+<body>
+    <div>
+        Alder: <br>
+        <input id="age" onchange="checkIfCanBuyBeer()">
+        Ser ut som alder: <br>
+        <input id="looksAge" onchange="checkIfCanBuyBeer()" type="slider">
+        Har id:
+        <input id="hasId" onchange="checkIfCanBuyBeer()" type="checkbox">
+    </div>
+    <div id="info">
+
+    </div>
+    <script>
+
+
+        checkIfCanBuyBeer();
+        function checkIfCanBuyBeer() {
+            let age = document.getElementById('age').valueAsNumber;
+            let looksAge = document.getElementById('looksAge').valueAsNumber;
+            let hasId = document.getElementById('hasId').checked;
+            let canBuyBeer = false;
+
+            if (looksAge >= 25) {
+
+            } else {
+                if (hasId){}
+
+            }
+
+        };
+    </script>
+</body>
+
+</html>
