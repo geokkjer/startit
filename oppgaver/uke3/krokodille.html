@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krokodille</title>
+    <style>
+        img{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Poeng: <div id="points"></div>
+        <img src="../../Crocodile.svg.png">
+        <div id="number1">
+
+        </div>
+        <input id="operator">
+        <div id="number2">
+        </div>
+        <div>
+            <button onclick="check()">Submit</button>
+            <button onclick="randomNumber()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let points = 0;
+        document.getElementById('points').innerHTML = `${points}`;
+        function randomNumber(){
+            number1 = Math.floor(Math.random() * 10) + 1;
+            number2 = Math.floor(Math.random() * 10) + 1;
+            document.getElementById('number1').innerHTML = `${number1}`;
+            document.getElementById('number2').innerHTML = `${number2}`;
+            return number1, number2
+
+        }
+        function check(number1, number2){
+            let operator = document.getElementById("operator").value;
+            if ((number1 + operator + number2) == true){
+                ++points;
+                document.getElementById('points').innerHTML = `${points}`;
+                
+            } else { 
+                alert('Wrong!');
+            }
+            console.log(operator)
+
+        }
+    </script>
+</body>
+</html>
