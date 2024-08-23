@@ -8,12 +8,16 @@
         img{
             height: 100px;
         }
+        div{
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
     <div>
         Poeng: <div id="points"></div>
         <img src="../../Crocodile.svg.png">
+        <div>Lovlige operatorer < og > og = og ==</div>
         <div id="number1">
 
         </div>
@@ -28,26 +32,27 @@
 
     <script>
         let points = 0;
+        var number1
+        var number2
         document.getElementById('points').innerHTML = `${points}`;
         function randomNumber(){
             number1 = Math.floor(Math.random() * 10) + 1;
             number2 = Math.floor(Math.random() * 10) + 1;
             document.getElementById('number1').innerHTML = `${number1}`;
             document.getElementById('number2').innerHTML = `${number2}`;
-            return number1, number2
-
         }
-        function check(number1, number2){
+        function check(){
             let operator = document.getElementById("operator").value;
-            if ((number1 + operator + number2) == true){
+            // console.log(eval(number1 + operator + number2))
+            if (operator = '='){
+                operator = '==';
+            } 
+            if (eval(number1 + operator + number2)){
                 ++points;
                 document.getElementById('points').innerHTML = `${points}`;
-                
             } else { 
-                alert('Wrong!');
+                alert('It is Wrong! to use Alert');
             }
-            console.log(operator)
-
         }
     </script>
 </body>
