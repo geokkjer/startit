@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formater stringen</title>
+</head>
+<body>
+    <input type="text" id="string" onchange="formatString()">
+
+    <div>Med stor bokstav</div>
+    <div id="new"></div>
+    <script>
+        function formatString(){
+            let string = document.getElementById('string').value;
+            console.log(string)
+            let newString = string.charAt(0).toUpperCase() + string.slice(1);
+            document.getElementById('new').innerHTML = `${newString}`;
+        }
+    </script>
+</body>
+</html>
