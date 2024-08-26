@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro</title>
 </head>
+
 <body>
     <div class="group">
         <div>Hei jeg heter</div>
-        <div id="namediv">...her kommer et navn</div>
+        <div id="namediv">...her kommer et navn<br></div>
     </div>
     <div class="group">
         <div>Jeg bor i</div>
-        <div id="placediv">..her kommer et sted</div>
+        <div id="placediv">..her kommer et sted<br></div>
     </div>
     <div class="group">
         <div>Min favorittmat er</div>
-        <div id="fooddiv">...her kommer en matrett</div>
+        <div id="fooddiv">...her kommer en matrett<br></div>
     </div>
 
     <button onclick="setFields()">Klikk her for å sett inn verdier</button>
+    Navn: <input type="text" onchange="setName(this.value)">
+    Sted: <input type="text" onchange="setPlace(this.value)">
+    Mat: <input type="text" onchange="setFood(this.value)">
 
     <script>
-        let name;
+
+        // Model
+        let fistName;
         let place;
         let food;
-        
-        function setFields(){
-            document.getElementById("namediv").innerHTML = "Geir";
-            document.getElementById("placediv").innerHTML = "Kristiansand";
-            document.getElementById("fooddiv").innerHTML = "Pizza";
+        // View
+        function setFields() {
+            document.getElementById("namediv").innerHTML = fistName;
+            document.getElementById("placediv").innerHTML = place;
+            document.getElementById("fooddiv").innerHTML = food;
 
+        }
+        // Controller
+        function setName(nameInput) {
+            firstName = nameInput;
+            setFields();
+        }
+        function setPlace(placeInput) {
+            place = placeInput;
+            setFields();
+        }
+        function setFood(foodInput) {
+            food = foodInput;
+            setFields();
         }
     </script>
     <style>
-        .group{
+        .group {
             display: flex;
+            padding: 1px;
         }
     </style>
 </body>
+
 </html>
