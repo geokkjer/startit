@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+</head>
+<body>
+    <div class="group">
+        <div>Hei jeg heter</div>
+        <div id="namediv">...her kommer et navn</div>
+    </div>
+    <div class="group">
+        <div>Jeg bor i</div>
+        <div id="placediv">..her kommer et sted</div>
+    </div>
+    <div class="group">
+        <div>Min favorittmat er</div>
+        <div id="fooddiv">...her kommer en matrett</div>
+    </div>
+
+    <button onclick="setFields()">Klikk her for å sett inn verdier</button>
+
+    <script>
+        let name;
+        let place;
+        let food;
+        
+        function setFields(){
+            document.getElementById("namediv").innerHTML = "Geir";
+            document.getElementById("placediv").innerHTML = "Kristiansand";
+            document.getElementById("fooddiv").innerHTML = "Pizza";
+
+        }
+    </script>
+    <style>
+        .group{
+            display: flex;
+        }
+    </style>
+</body>
+</html>
