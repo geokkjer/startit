@@ -46,9 +46,8 @@
             }
             function check() {
                 let operator = document.getElementById("operator").value;
-                console.log(operator)
-                if (operator == '=') {
-                    operator == '==';
+                if (operator = '=') {
+                    operator = '==';
                 }
                 console.log(eval(number1 + operator + number2));
                 if (eval(number1 + operator + number2)) {
@@ -56,7 +55,6 @@
                     document.getElementById('points').innerHTML = `${points}`;
                 } else {
                     alert('It is Wrong! to use Alert');
-                    console.log(operator)
                 }
             }
         </script>
