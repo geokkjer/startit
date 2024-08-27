@@ -8,55 +8,57 @@
 </head>
 
 <body>
-    <div class="group">
-        <div>Hei jeg heter</div>
-        <div id="namediv">...her kommer et navn<br></div>
+    <div id="app">
     </div>
-    <div class="group">
-        <div>Jeg bor i</div>
-        <div id="placediv">..her kommer et sted<br></div>
-    </div>
+
+    <script>
+
+        // Model
+        let firstName = "...her kommer et navn";
+        let place = "..her kommer et sted";
+        let food = "...her kommer en matrett";
+        // View
+        updateView();
+        function updateView() {
+            let html = `
+            <div class="group">
+                <div>Hei jeg heter</div>
+                <div id="namediv"> ${firstName}<br></div>
+            </div>
+            <div class="group">
+                <div>Jeg bor i</div>
+                <div id="placediv"> ${place}<br></div>
+            </div>
     <div class="group">
         <div>Min favorittmat er</div>
-        <div id="fooddiv">...her kommer en matrett<br></div>
+        <div id="fooddiv"> ${food}<br></div>
     </div>
 
     <button onclick="setFields()">Klikk her for å sett inn verdier</button>
     Navn: <input type="text" onchange="setName(this.value)">
     Sted: <input type="text" onchange="setPlace(this.value)">
     Mat: <input type="text" onchange="setFood(this.value)">
-
-    <script>
-
-        // Model
-        let firstName;
-        let place;
-        let food;
-        // View
-        function setFields() {
-            document.getElementById("namediv").innerHTML = firstName;
-            document.getElementById("placediv").innerHTML = place;
-            document.getElementById("fooddiv").innerHTML = food;
-
+            `;
+            document.getElementById('app').innerHTML = html;
         }
         // Controller
         function setName(nameInput) {
             firstName = nameInput;
-            setFields();
+            updateView();
         }
         function setPlace(placeInput) {
             place = placeInput;
-            setFields();
+            updateView();
         }
         function setFood(foodInput) {
             food = foodInput;
-            setFields();
+            updateView();
         }
     </script>
     <style>
         .group {
             display: flex;
-            padding: 1px;
+            padding: 3px;
         }
     </style>
 </body>
