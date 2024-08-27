@@ -1,0 +1,12 @@
+.app{
+    background-color: blue;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 20px;
+    color: aqua;
+}
+.sentence{
+    padding: 20px;
+}
