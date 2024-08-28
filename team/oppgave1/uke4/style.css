@@ -1,14 +1,17 @@
 
 .FrogFace {
-    user-select: none;
+    user-select: none; 
     padding: 2px;
-    border: solid, 5px rgb(19, 204, 19);
+    border: solid, 15px rgb(19, 204, 19);
     max-width: 650px;
+    
 
 }
-img{
+.img{
     max-width: 100%;
     max-height: 100%;
+    
+    
 }
 .square {
     height: 75px;

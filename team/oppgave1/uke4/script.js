@@ -6,22 +6,25 @@ let petElement = document.getElementById('petId');
 let frogImage = document.getElementById('tamaFrog').src = "img/default.jpg";
 
 
-setInterval(foodFunction, 1000);
-setInterval(petFunction, 1000);
+let foodCounter = setInterval(foodFunction, 1000);
+let petCounter = setInterval(petFunction, 1000);
 
 // View
-// function reset() {
-//     if (foodTime < 0){
-//         foodTime += 50;
-//         petTime += 10; 
-//         defaultImg();   
-//     }
-// }
+function reset() {
+    if (foodTime < 0){
+        defaultImg(); 
+        foodTime = 50;
+        setInterval(foodFunction, 1000);
+        petTime = 10;
+        setInterval(petFunction, 1000);
+    }
+}
 function foodFunction() {
     if (foodTime < 0) {
         //game over???
         document.getElementById('tamaFrog').src = "img/dead.jpg";
-        // setTimeout(afterLife, 1000);
+        clearInterval(foodCounter);
+        setTimeout(afterLife, 5000);
     } else {
         foodElement.innerHTML = foodTime + " seconds remaining"
         foodTime--
@@ -34,6 +37,7 @@ function foodFunction() {
 function feed() {
     if (foodTime > 0 && petTime > 5) {
         foodTime += 10;
+        petElement.innerHTML = petTime + " seconds remaining." + " Pet the frog";
         document.getElementById('tamaFrog').src = "img/eating.jpg";
         setTimeout(defaultImg, 500)
     }
@@ -45,15 +49,21 @@ function defaultImg() {
 }
 
 function petFunction() {
-    if (petTime < 5) {
+if (petTime < 0) {
+    clearInterval(petCounter);
+} else if (petTime < 5) {
         document.getElementById('tamaFrog').src = "img/angry.jpg";
+        petElement.innerHTML = petTime + " seconds remaining"
+        petTime--;
     }
     else {
         petElement.innerHTML = petTime + " seconds remaining"
-        petTime--
-       
+        petTime-- 
     }
 }
+
+    
+
 function pet() {
     if (foodTime > 0) {
         petTime += 10;
