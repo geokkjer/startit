@@ -5,7 +5,7 @@ let word1 = '__ ';
 let word2 = '__ ';
 let word3 = '__ ';
 let word4 = '__ ';
-let sentence = "Once there was " + word1 + " " + word2 +" that " + word3 + " in the " + word4 + " - and great things happened. The End";
+let sentence = "Once there was " + word1 + " " + word2 + " that " + word3 + " in the " + word4 + " - and great things happened. The End";
 // View
 // HTML, onclick CSS
 updateView();
@@ -28,25 +28,26 @@ function updateView() {
 //  Controller endrer modellen
 function insertWords1(word) {
     word1 = word;
-    sentence = "Once there was " + word1 + " " + word2 +" that " + word3 + " in the " + word4 + " - and great things happened. The End";
+    sentence = "Once there was " + word1 + " " + word2 + " that " + word3 + " in the " + word4 + " - and great things happened. The End";
     document.getElementById('sentence').innerHTML = sentence;
     updateView();
 
-} 
+}
 function insertWords2(word) {
     word2 = word;
-    sentence = "Once there was " + word1 + " " + word2 +" that " + word3 + " in the " + word4 + " - and great things happened. The End";
+    sentence = "Once there was " + word1 + " " + word2 + " that " + word3 + " in the " + word4 + " - and great things happened. The End";
     document.getElementById('sentence').innerHTML = sentence;
-
+    updateView();
 }
 function insertWords3(word) {
     word3 = word;
-    sentence = "Once there was " + word1 + " " + word2 +" that " + word3 + " in the " + word4 + " - and great things happened. The End";
+    sentence = "Once there was " + word1 + " " + word2 + " that " + word3 + " in the " + word4 + " - and great things happened. The End";
     document.getElementById('sentence').innerHTML = sentence;
-
-} function insertWords4(word) {
+    updateView();
+}
+function insertWords4(word) {
     word4 = word;
-    sentence = "Once there was " + word1 + " " + word2 +" that " + word3 + " in the " + word4 + " - and great things happened. The End";
+    sentence = "Once there was " + word1 + " " + word2 + " that " + word3 + " in the " + word4 + " - and great things happened. The End";
     document.getElementById('sentence').innerHTML = sentence;
-
+    updateView();
 } 
