@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        // Model
+        let number = 5;
+        let aName;
+
+        // view
+        updateView()
+        function updateView() {
+            //     let extraWord = '';
+            //     if (number < 10){
+            //         extraWord = 'ikke';
+            //     } else {
+            //         extraWord = '';
+            //     }
+            document.getElementById('app').innerHTML = /*HTML*/ `
+                <h1>${number}</h1>
+                Tallet er ${number <= 10 ? 'ikke' : ''} over 10
+                <p>Hei ${aName ?? 'på deg!'}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Skjemaer</title>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+    <script>
+        // model
+        let message = null;// = 'Alt gikk bra';
+
+        // view
+        updateView()
+        function updateView(){
+            if (message == null){
+
+            } else {
+                document.getElementById('app').innerHTML = /*HTML*/ `
+                    <h1>Min app</h1>
+                    ${message}
+                    <button>Vis sukksess</button>
+                    <button>Vis advarsel</button>
+                    <button></button>
+                    <button>1</button>
+            `;
+            };
+        }
+        // controller
+    </script>
+</body>
+</html>
