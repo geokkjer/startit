@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        td {
+            border: 1px solid darkgray;
+            padding: 2px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bolder;
+            text-shadow: 1px 0 #888888;
+            background-color: gray;
+        }
+
+        td.x3 {
+            color: red;
+        }
+
+        td.x2 {
+            color: green;
+        }
+
+        td.x1 {
+            color: blue;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Minesweeper</h1>
+    <table id="matrix"></table>
+    <script>
+        var matrixModel;
+        var matrxiView = document.getElementById('matrix');
+        var totalNumberOfBombs = 7;
+        var size = 16;
+        var matrixModel;
+
+        init(size);
+        placeBombs();
+        calculateNearByBombs();
+        showMatrix();
+
+        matrix.rows[0].cells[0].isBomb = true;
+        matrix.rows[0].cells[0].isOpen = true;
+        matrix.rows[0].cells[1].bombsNearby = 9;
+        matrix.rows[0].cells[1].isOpen = true;
+        matrix.rows[0].cells[2].isOpen = true;
+
+        function init(size) {
+            var matrixModel = {};
+            matrixModel.rows = [];
+            for (var rowCounter = 0; rowCounter < size; rowCounter++) {
+                var newRow = {};
+                newRow.cells = [];
+                for (var cellCounter = 0; cellCounter < size; cellCounter++) {
+                    var newCell = {};
+                    newCell.isBomb = false;
+                    newCell.isOpen = false;
+                    newCell.bombsNearby = 0;
+                    newRow.cells.push(newCell);
+                }
+                matrixModel.rows.push(newRow);
+            }
+        }
+        function showMatrix() {
+            matrxiView.innerHTML = '';
+            for (var rowCounter = 0; rowCounter < size; rowCounter++) {
+                var viewRow = matrxiView.insertRow();
+                var modelRow = matrixModel.rows[rowCounter];
+                for (var cellCounter = 0; cellCounter < modelRow.cells.lenght; cellCounter++) {
+                    var viewCell = viewRow.insertCell();
+                    var modelCell = modelRow.cells[cellCounter];
+                    if (modelCell.isOpen) {
+                        viewCell.style.backgroundcolor = 'lightcyan';
+                        if (modelCell.isBomb) {
+                            viewCell.innerHTML = '💣';
+                        } else if (modelCell.bombsNearby > 0) {
+                            viewCell.innerHTML = modelCell.bombsNearby;
+                            viewCell.classList.add('x' + modelCell.bombsNearby)
+                        }
+                    }
+                }
+            }
+        }
+
+
+        function placeBombs() {
+
+        }
+
+        function calculateNearByBombs() {
+
+        }
+
+
+    </script>
+</body>
+
+</html>
