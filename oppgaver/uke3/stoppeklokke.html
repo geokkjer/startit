@@ -27,8 +27,7 @@
             ++time;
         }
         function resetTimer() {
-            document.getElementById('round').innerHTML += `<li>${time -1} sekunder</li`;
-            clearInterval(time)
+            document.getElementById('round').innerHTML += `<li>${time - 1} sekunder</li`;
             time = 0;
         }
         function stopTimer(){
