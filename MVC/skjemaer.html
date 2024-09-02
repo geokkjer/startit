@@ -19,16 +19,9 @@
         let fontSize;
         let isDarkMode = false;
 
-
         // view
         updateView()
         function updateView() {
-            //     let extraWord = '';
-            //     if (number < 10){
-            //         extraWord = 'ikke';
-            //     } else {
-            //         extraWord = '';
-            //     }
             document.getElementById('app').innerHTML = /*HTML*/ `
                 <p>Hei ${aName ?? 'på deg!'}</p>
                 Navn:<br>
@@ -82,7 +75,7 @@
                     ><br>
             `;
             let bodyStyle = document.body.style;
-            bodyStyle.fontFamily = fontFamily ?? serif;
+            bodyStyle.fontFamily = fontFamily ?? 'serif';
             if (isDarkMode){
                 bodyStyle.background = 'black';
                 bodyStyle.color = 'white';
@@ -90,7 +83,7 @@
                 bodyStyle.background = 'white';
                 bodyStyle.color = 'black';
             };
-            
+
             bodyStyle.fontSize = fontSize;
         }
 
