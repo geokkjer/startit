@@ -111,7 +111,21 @@
         }
 
         function calculateNearByBombs() {
-
+            for (var rowCounter = 0; rowCounter < matrixModel.rows.length; rowCounter++) {
+                var modelRow = matrixModel.rows[rowCounter];
+                for (var cellCounter = 0; cellCounter < modelRow.cells.length; cellCounter++) {
+                    var modelCell = modelRow.cells[cellCounter];
+                    modelCell.bombsNearBy =
+                        countBomb(rowCounter - 1, cellCounter - 1)
+                        + countBomb(rowCounter - 1, cellCounter)
+                        + countBomb(rowCounter - 1, cellCounter + 1)
+                        + countBomb(rowCounter, cellCounter - 1)
+                        + countBomb(rowCounter, cellCounter + 1)
+                        + countBomb(rowCounter + 1, cellCounter - 1)
+                        + countBomb(rowCounter + 1, cellCounter)
+                        + countBomb(rowCounter + 1, cellCounter + 1);
+                }
+            }
         }
         function handleClick(aMouseEvent) {
 
