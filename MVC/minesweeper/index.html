@@ -62,7 +62,7 @@
                 for (var cellCounter = 0; cellCounter < modelRow.cells.lenght; cellCounter++) {
                     var viewCell = viewRow.insertCell();
                     var modelCell = modelRow.cells[cellCounter];
-                    if (true) {//(modelCell.isOpen) {
+                    if (modelCell.isOpen) {
                         viewCell.style.backgroundcolor = 'lightcyan';
                         if (modelCell.isBomb) {
                             viewCell.innerHTML = '💣';
@@ -81,8 +81,6 @@
         function init(size) {
             matrixModel = {};
             matrixModel.rows = [];
-
-
             for (var rowCounter = 0; rowCounter < size; rowCounter++) {
                 var newRow = {};
                 newRow.cells = [];
@@ -97,8 +95,6 @@
             }
             console.log('init ' + `${matrixModel.rows}`);
         }
-
-
 
         function placeBombs() {
             for (var bombCount = 0; bombCount < totalNumberOfBombs; bombCount--) {
@@ -128,9 +124,28 @@
             }
         }
         function handleClick(aMouseEvent) {
-
-            // Forandre modellen
+            var rowIndex = aMouseEvent.srcElement.parentElement.sectionRowIndexM
+            var columnIndex = aMouseEvent.srcElement.cellIndex;
+            var modelCell = matrixModel.rows[rowIndex].cells[columnIndex];
+            openBlankCells(rowIndex, columnIndex);
+            modelCell.isOpen = true;
             showMatrix();
+        }
+        function countBomb(row, column){
+            if (row < 0 || row >= size || column < 0 || column >= size) return 0;
+            return matrixModel.rows[row].cells[column].isBomb
+        }
+
+        function openBlankCells(rowIndex, columnIndex){
+            if (rowIndex < 0 || rowIndex >= size || columnIndex < 0 || columnIndex >= size) return;
+            var modelCell = matrixModel.rows[rowIndex].cells[columnIndex];
+            if (!modelCell.isBomb && !modelCell.isOpen && modelCell.bombsNearBy === 0) {
+                modelCell.isOpen = true;
+                openBlankCells(rowIndex - 1, columnIndex);
+                openBlankCells(rowIndex, columnIndex - 1);
+                openBlankCells(rowIndex, columnIndex + 1);
+                openBlankCells(rowIndex + 1, columnIndex);
+            }
         }
 
     </script>
