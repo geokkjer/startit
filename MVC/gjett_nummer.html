@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <div id="app">
+
+    </div>
+    <script>
+        // modell
+        let guessNumber;
+        let secretNumber;
+        let guessCount = 0;
+
+        //view
+        function updateView() {
+            let text;
+            document.getElementById('app').innerHTML = /*HTML*/ `
+            <div>${text}</div>
+            <div>Du har gjettet ${guessCount} ganger.</div>  
+            <input
+                type="number"
+                min="1"
+            />
+            <button onclick="guess()">Gjett</button>
+            <button onclick="reset()">Start på nytt</button>  
+            `;
+        }
+        function getMessage() {
+            if (!guessNumber) return '';
+            if(guessNumber==secretNumber) return 'Riktig';
+            if(guessNumber<secretNumber) return 'For lavt';
+            return 'For høyt';
+
+        }
+        // controller
+
+        function init(){
+            secretNumber = Math.floor(Math.random() * 100) + 1;
+            updateView();
+        }
+        function guess(){
+            guessCount++
+            updateView()
+        }
+
+    </script>
+</body>
+</html>

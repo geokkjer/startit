@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        app {
+            display: grid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <label for=""></label>
+        <div>Forgrunnsfarge: </div>
+        <select onchange="foreColor=this.value">
+            <option></option>
+            <option value="black">Sort</option>
+            <option value="red">Rød</option>
+        </select>
+        <br>
+        Bakgrunnsfarge: <select name="" id=""></select><br>
+        <button onclick="">Oppdater</button>
+    </div>
+
+    <script>
+        let foreColor = null;
+        let backColor = null;
+
+        updateView()
+        function updateView(){
+
+        }
+    </script>
+</body>
+
+</html>

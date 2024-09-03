@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        // modell
+        let board = "73541 286";
+
+        // view
+        updateView();
+        function updateView(){
+            createSquareHtml(1)
+            + createSquareHtml(2)
+        }
+
+        function createSquareHtml(index1, index2){
+            return /*HTML*/ `
+                <div onclick="swap(${index})">${board.charAt(index)}</div>
+            `;
+        }
+        // controller
+        function swap(){
+            let blankIndex = board.indexOf(' ');
+            let selectedNumber = board.charAt(index);
+            board = board.replace(' ', selectedNumber);
+
+            updateView();
+        };
+        function areNeighbours(){
+
+        };
+
+    </script>
+    
+</body>
+</html>

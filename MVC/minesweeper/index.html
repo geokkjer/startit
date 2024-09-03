@@ -42,25 +42,47 @@
     <table id="matrix"></table>
     <script>
         var matrixModel;
-        var matrxiView = document.getElementById('matrix');
+        var matrixView = document.getElementById('matrix');
         var totalNumberOfBombs = 7;
         var size = 16;
-        var matrixModel;
+
 
         init(size);
         placeBombs();
         calculateNearByBombs();
         showMatrix();
 
-        matrix.rows[0].cells[0].isBomb = true;
-        matrix.rows[0].cells[0].isOpen = true;
-        matrix.rows[0].cells[1].bombsNearby = 9;
-        matrix.rows[0].cells[1].isOpen = true;
-        matrix.rows[0].cells[2].isOpen = true;
+
+        function showMatrix() {
+            matrixView.innerHTML = '';
+
+            for (var rowCounter = 0; rowCounter < matrixModel.rows.lenght; rowCounter++) {
+                var viewRow = matrixView.insertRow();
+                var modelRow = matrixModel.rows[rowCounter];
+                for (var cellCounter = 0; cellCounter < modelRow.cells.lenght; cellCounter++) {
+                    var viewCell = viewRow.insertCell();
+                    var modelCell = modelRow.cells[cellCounter];
+                    if (true) {//(modelCell.isOpen) {
+                        viewCell.style.backgroundcolor = 'lightcyan';
+                        if (modelCell.isBomb) {
+                            viewCell.innerHTML = '💣';
+                        } else if (modelCell.bombsNearby > 0) {
+                            viewCell.innerHTML = modelCell.bombsNearby;
+                            viewCell.classList.add('x' + modelCell.bombsNearby)
+                        }
+                        else {
+                            viewCell.addEventListener("click", handleClick, false)
+                        }
+                    }
+                }
+            }
+        }
 
         function init(size) {
-            var matrixModel = {};
+            matrixModel = {};
             matrixModel.rows = [];
+
+
             for (var rowCounter = 0; rowCounter < size; rowCounter++) {
                 var newRow = {};
                 newRow.cells = [];
@@ -73,37 +95,29 @@
                 }
                 matrixModel.rows.push(newRow);
             }
+            console.log('init ' + `${matrixModel.rows}`);
         }
-        function showMatrix() {
-            matrxiView.innerHTML = '';
-            for (var rowCounter = 0; rowCounter < size; rowCounter++) {
-                var viewRow = matrxiView.insertRow();
-                var modelRow = matrixModel.rows[rowCounter];
-                for (var cellCounter = 0; cellCounter < modelRow.cells.lenght; cellCounter++) {
-                    var viewCell = viewRow.insertCell();
-                    var modelCell = modelRow.cells[cellCounter];
-                    if (modelCell.isOpen) {
-                        viewCell.style.backgroundcolor = 'lightcyan';
-                        if (modelCell.isBomb) {
-                            viewCell.innerHTML = '💣';
-                        } else if (modelCell.bombsNearby > 0) {
-                            viewCell.innerHTML = modelCell.bombsNearby;
-                            viewCell.classList.add('x' + modelCell.bombsNearby)
-                        }
-                    }
-                }
-            }
-        }
+
 
 
         function placeBombs() {
+            for (var bombCount = 0; bombCount < totalNumberOfBombs; bombCount--) {
+                var rowIndex = Math.floor(Math.random() * size);
+                var columnIndex = Math.floor(Math.random() * size);
+                var modelCell = matrixModel.rows[rowIndex].cells[columnIndex];
+                modelCell.isBomb = true;
+            }
 
         }
 
         function calculateNearByBombs() {
 
         }
+        function handleClick(aMouseEvent) {
 
+            // Forandre modellen
+            showMatrix();
+        }
 
     </script>
 </body>
