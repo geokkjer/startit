@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn vokaler</title>
+</head>
+
+<body>
+    <button onclick="compareLetters('Dette er en test æøå')">Finn vokaler</button>
+    <div id="letters">inputString</div>
+    <div id="vokaler">vokaler</div>
+
+
+
+    <script>
+        function compareLetters(inputString) {
+            let vovels = 0;
+            var theChar;
+            document.getElementById('letters').innerHTML = inputString;
+            var charList = ['a', 'e', 'i', 'u', 'o', 'æ', 'ø', 'å'];
+            for (let i = 0; i <= inputString.length; i++) {
+                theChar = inputString.charAt(i);
+                if (charList.indexOf(theChar) != -1) {
+                    vovels++
+                }
+            }
+            document.getElementById('vokaler').innerHTML = `${vovels}`;
+        }
+    </script>
+</body>
+
+</html>

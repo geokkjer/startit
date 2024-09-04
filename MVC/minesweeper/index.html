@@ -131,12 +131,12 @@
             modelCell.isOpen = true;
             showMatrix();
         }
-        function countBomb(row, column){
+        function countBomb(row, column) {
             if (row < 0 || row >= size || column < 0 || column >= size) return 0;
             return matrixModel.rows[row].cells[column].isBomb
         }
 
-        function openBlankCells(rowIndex, columnIndex){
+        function openBlankCells(rowIndex, columnIndex) {
             if (rowIndex < 0 || rowIndex >= size || columnIndex < 0 || columnIndex >= size) return;
             var modelCell = matrixModel.rows[rowIndex].cells[columnIndex];
             if (!modelCell.isBomb && !modelCell.isOpen && modelCell.bombsNearBy === 0) {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Numbers tested: <br><div id="num"></div>
+        <div id="display"></div>
+        <button onclick="generateRandom()">generer nummer</button>
+    </div>
+
+    <script>
+        function generateRandom() {
+            let number1 = Math.floor(Math.random() * 100) + 1;
+            let number2 = Math.floor(Math.random() * 100) + 1;
+            
+            
+            while (number1 !== number2) {
+                document.getElementById('num').innerHTML += /*HTML*/ `${number1} != ${number2}<br>`;
+                number1 = Math.floor(Math.random() * 100) + 1
+                number2 = Math.floor(Math.random() * 100) + 1
+            }
+            document.getElementById('display').innerHTML = 'Equal numbers found ' + number1 + ' ' + number2 ;
+        }
+    </script>
+</body>
+
+</html>

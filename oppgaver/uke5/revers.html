@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input onchange="getText()" type="text" id="fromUser">
+        <div id="inputText">Fra Bruker</div>
+        <div id="reverseText">Reversert</div>
+    </div>
+    <script>
+        var inputText;
+        function getText() {
+            inputText = document.getElementById('fromUser').value;
+            document.getElementById('inputText').innerHTML = inputText;
+            reverseText(inputText);
+        }
+        function reverseText(textToReverse) {
+            document.getElementById('reverseText').innerHTML = ' ';
+            for (i = textToReverse.length; i >= 0; i--) {
+                document.getElementById('reverseText').innerHTML += textToReverse.charAt(i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
