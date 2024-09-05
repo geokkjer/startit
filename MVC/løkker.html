@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        // Model
+        let maxNumber = 10;
+
+        // view
+        updateView();
+        function updateView() {
+            let lishtml = '';
+            for (let i = 1; i <= maxNumber; i++) {
+                lishtml += /*HTML*/ `
+                <li>${maxNumber} x ${i} = ${i * 10}</li>
+            `;
+            }
+
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>App</h1>
+            <input 
+                style="font-size:300%;"
+                type="number" min="1" step="1" max="100";
+                oninput="maxNumber=this.valueAsNumber; updateView();"
+                value="${maxNumber}"
+            />
+            
+            <ul>
+                ${lishtml}
+            </ul>
+        `;
+        }    
+    </script>
+</body>
+
+</html>
