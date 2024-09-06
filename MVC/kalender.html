@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        //model
+        let timeAndDate = new Date();
+        let date = new Date(timeAndDate)
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/ `
+                <h1>
+                    ${date.toLocaleDateString()}
+                </h1>
+                <button onclick="addDay()">+ 1 dag</button>
+                <button onclick="addDay()">- 1 dag</button>
+                <button onclick="addDay()">+ 1 time</button>
+                <button onclick="addDay()">- 1 time</button>
+            `;
+        }
+
+        // controller
+        function addDay(){
+            let date = new Date(timeAndDate);
+            let millis = date.getTime();
+            millis += 1000 * 60 * 60 * 24;
+            timeAndDate = new Date(millis).toISOString();
+            updateView();
+        }
+    </script>
+</body>
+
+</html>

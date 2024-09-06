@@ -10,7 +10,7 @@
 
     <script>
         const app = document.getElementById('app');
-        const pocketStuff = ['Hat', 'Pencil', ];
+        const pocketStuff = ['Hat', 'Pencil', 'Dinosaur', 'Showercap', 'Piece of tape'];
 
         view();
         function view() {
@@ -25,12 +25,12 @@
 
         // controller
         function seeWhatsInPocket(){
-            for (i = 0; i < pocketStuff.lenght; i++){
+            for (i = 0; i < pocketStuff.length; i++){
                 console.log(i);
                 app.innerHTML += /*HTML*/ `
                     <li>${pocketStuff[i]}</li>
                 `;
-            }
+            };
         }
     
     </script>

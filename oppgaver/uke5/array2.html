@@ -13,6 +13,7 @@
         let htmlCart = '';
         const goods = ['TV', 'Computer', 'Gaming Consol', 'Coffee'];
         let shoppingCart = [];
+        let item;
         let app = document.getElementById('app');
         let tv = 0;
         let computer = 0;
@@ -22,7 +23,6 @@
         // View
         updateView();
         function updateView(){ 
-            let item;
             for (let i = 0; i < goods.length; i++){
                 item = goods[i];
                 html += /*HTML*/ `
@@ -65,9 +65,12 @@
                     <li>Gaming antall = ${gaming}</li>
                     <li>Kaffe antall = ${coffee}</li>
                 </div>
+                <button onclick="shopMore()">Kjøp mer!!</button>
             `;
-            
-           app.innerHTML += htmlCart;
+           app.innerHTML = htmlCart;
+        }
+        function shopMore(){
+            location.reload();
         }
     </script>
 </body>
