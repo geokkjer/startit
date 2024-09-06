@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Modell
+        let html = '';
+        let htmlCart = '';
+        const goods = ['TV', 'Computer', 'Gaming Consol', 'Coffee'];
+        let shoppingCart = [];
+        let app = document.getElementById('app');
+        let tv = 0;
+        let computer = 0;
+        let gaming = 0;
+        let coffee = 0;
+
+        // View
+        updateView();
+        function updateView(){ 
+            let item;
+            for (let i = 0; i < goods.length; i++){
+                item = goods[i];
+                html += /*HTML*/ `
+                    <li>${item}<br><button id="${item}" value="Generate" onclick="addToCart('${item}')">Legg i handlevogn</li></button>
+
+                `;
+            }
+            html += /*HTML*/ `
+                <br>
+                <button onclick="showCart()">Vis handlevogn</button>
+                
+            `;
+            
+            app.innerHTML += html;
+        }
+
+        // Controller
+        function addToCart(item){
+            shoppingCart.push(item);
+            if (item == 'TV'){
+                tv++
+            } else if (item == 'Computer'){
+                computer++
+            } else if (item == 'Gaming Consol'){
+                gaming++
+            } else if (item == 'Coffee'){
+                coffee++
+            } else {
+                alert('No')
+            }
+        
+            console.log(tv, computer, gaming, coffee)
+            
+        }
+        function showCart() {
+            htmlCart = '';
+            htmlCart += /*HTML*/ `
+                <div><li>TV antall = ${tv}</li>
+                    <li>Computer antall = ${computer}</li>
+                    <li>Gaming antall = ${gaming}</li>
+                    <li>Kaffe antall = ${coffee}</li>
+                </div>
+            `;
+            
+           app.innerHTML += htmlCart;
+        }
+    </script>
+</body>
+</html>
