@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script>
+        // modell
+        let colors = ['red','green','blue','yellow', 'grey']
+
+        // view
+        function updateView() {
+            for (let color of colors) {
+                colorsHtml = /*HTML*/ `
+                    <div class="color">
+                        <div class="topBox">
+                                ${createColors}
+                            </div>
+
+                    </div>
+                `;
+            }
+            document.getElementById('app').innerHTML = /*HTML*/ `
+                <div class="colors>"></div>
+            `;
+        }
+
+        function createColorsHtml(){
+            let colorsHtml = '';
+            for(let color of colors ){
+                
+            }
+        }
+    </script>
+</body>
+</html>
