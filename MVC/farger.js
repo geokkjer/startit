@@ -34,9 +34,9 @@ function addColor() {
     addColorName = '';
     updateView();
 }
-function createColorHtml() {
+function createColorsHtml() {
     let colorsHtml = '';
-    for (let i = 0; i < colors.lenght; i++) {
+    for (let i = 0; i < colors.length; i++) {
         let color = colors[i];
         colorsHtml += /*HTML*/ `
             <div class="color">

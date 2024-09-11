@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD MVC</title>
+    <style>
+        .box {
+            height: 3cqh;
+        }
+        .color{
+            border: 1px solid grey;
+            border-radius: 15px;
+            margin:  10px;
+            width: 200px;
+            overflow: hidden;
+        }
+        .topBox {
+            padding: 4px 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #484848;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
     <div id="app">
-        
+
     </div>
 
-    <script>
-        // modell
-        let colors = ['red','green','blue','yellow', 'grey']
-
-        // view
-        function updateView() {
-            for (let color of colors) {
-                colorsHtml = /*HTML*/ `
-                    <div class="color">
-                        <div class="topBox">
-                                ${createColors}
-                            </div>
-
-                    </div>
-                `;
-            }
-            document.getElementById('app').innerHTML = /*HTML*/ `
-                <div class="colors>"></div>
-            `;
-        }
-
-        function createColorsHtml(){
-            let colorsHtml = '';
-            for(let color of colors ){
-                
-            }
-        }
+    <script src="farger.js">
+        
     </script>
 </body>
+
 </html>
