@@ -23,7 +23,7 @@ var html = /*HTML*/`
 	    	<a class="btn rgb-animate-hvr">8-ball</a>
 		</div>
     <div class="content rgb-animate">			
-        Ask Your question: <input type="text" onchange="question = this.value" /><br>
+        Ask Your question: <input class="content"type="text" onchange="question = this.value" /><br>
         <button class="btn rgb-animate-hvr" onclick="pickRandomAnswer()">Submit</button>
     </div>
 </main>
