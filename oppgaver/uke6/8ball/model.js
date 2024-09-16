@@ -19,7 +19,7 @@ const negativeAnswers = [
 ];
 var html = /*HTML*/`
     <div id="ball">8-ball</div>
-    Ask Your question: <input type="text" /><br>
+    Ask Your question: <input type="text" onchange="question = this.value" /><br>
     <button onclick="pickRandomAnswer()">Submit</button>
 `;
 var htmlAnswer = '';
@@ -27,3 +27,4 @@ var htmlAnswer = '';
 var answerArray = [];
 var randomAnswersArrary = [];
 var randomAnswer;
+var question;
