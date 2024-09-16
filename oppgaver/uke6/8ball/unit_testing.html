@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>QUnit</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.22.0.css">
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.22.0.js"></script>
+  <script src="controller.js"></script>
+  <script>
+    QUnit.test('Answer', function (assert) {
+      // arrange
+      let AffirmativeAnswers = ['hello'];
+
+      // act
+
+      let returnedText = pickRandomAnswer();
+
+      // assert
+      assert.equal(returnedText, 'hello');
+    });
+  </script>
+</body>
+
+</html>
