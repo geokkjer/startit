@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epost eller ikke</title>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script>
+        var app = document.getElementById('app');
+        var answerHtml = '';
+        var inputTextToCheck = 'Default text';
+        var html = /*HTML*/ `
+                <input type="email" value="Epost her" onchange="inputTextToCheck = this.value">
+                <button onclick="isEmail(inputTextToCheck)">Sjekk om det er en Epost</button>  
+                `;
+
+
+        updateView()
+        function updateView() {
+            app.innerHTML = html + answerHtml;
+        }
+        function isEmail(inputTextToCheck) {
+            let isItEmail;
+            if (inputTextToCheck === 'Default text' || inputTextToCheck.includes(' ')) {
+                inputTextToCheck = 'Inneholder mellomrom eller er default tekst, ikke Epost'
+                answerHtml = /*HTML*/ `<div id="answer">${inputTextToCheck}</div>`;
+                updateView();
+            } else {
+                if (inputTextToCheck.includes("@")) {
+                    newText = inputTextToCheck.split('@').pop();
+                    if (newText.includes('.')) {
+                        isItEmail = 'kan være';
+                    } else { isItEmail = 'er ikke'; }
+                } else {
+                    isItEmail = 'er ikke';
+                };
+                answerHtml = /*HTML*/ `<div id="answer">${inputTextToCheck} ${isItEmail} en Epost</div>`;
+                updateView();
+            };
+        }
+    </script>
+</body>
+
+</html>
