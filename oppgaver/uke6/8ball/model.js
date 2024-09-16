@@ -24,7 +24,7 @@ var html = /*HTML*/`
 		</div>
     <div class="content rgb-animate">			
         Ask Your question: <input type="text" onchange="question = this.value" /><br>
-        <button onclick="pickRandomAnswer()">Submit</button>
+        <button class="btn rgb-animate-hvr" onclick="pickRandomAnswer()">Submit</button>
     </div>
 </main>
 `;
