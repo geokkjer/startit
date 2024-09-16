@@ -20,17 +20,27 @@
             app.innerHTML = /*HTML*/ `
                 Input score:<input type="number" onchange="score = this.value">
                 <button onclick="getScoreRating(score)">check your rating</button>
+                <button onclick="fizzBuzz()">Fizz the buzz</button>
                 <div>Your rating: ${scoreRating}</div>
             `;
 
         }
-
         //control
         function getScoreRating(score) {
-            scoreRating = score > 70 ? score + " Excellent" :
-                score > 50 ? score + " Average" :
-                    score + " Do better!";
+            scoreRating = score > 90 ? score + " Excellent" :
+                score > 70 ? score + " Good" :
+                    score > 50 ? score + " Average" :
+                        score + " Do better!";
             updateView();
+        }
+        function fizzBuzz() {
+            for (let i = 1; i < 101; i++) {
+                let fizzbuzzOrBuzzOrFizz = i % 15 === 0 ? 'fizzbuzz' :
+                    i % 5 === 0 ? 'buzz' :
+                        i % 3 === 0 ? 'fizz' :
+                            i;
+                app.innerHTML += `<br>${fizzbuzzOrBuzzOrFizz}`;
+            }
         }
     </script>
 </body>
