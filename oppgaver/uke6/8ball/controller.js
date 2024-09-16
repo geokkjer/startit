@@ -5,7 +5,7 @@ function pickRandomAnswer(){
     
     randomAnswer = randomAnswersArrary[Math.floor(Math.random() * randomAnswersArrary.length)]
     htmlAnswer = /*HTML*/ `
-        <div>Question: ${question}</div><br>
+        <div>Your question: ${question}, does not matter</div><br>
         <div>Answer: ${randomAnswer}</div>
     `;
     clearScreen();
