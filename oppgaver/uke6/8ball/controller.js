@@ -5,8 +5,8 @@ function pickRandomAnswer(){
     
     randomAnswer = randomAnswersArrary[Math.floor(Math.random() * randomAnswersArrary.length)]
     htmlAnswer = /*HTML*/ `
-        <div>Your question: ${question}, does not matter</div><br>
-        <div>Answer: ${randomAnswer}</div>
+        <div class="content">Your question: ${question}, does not matter</div><br>
+        <div class="content">Answer: ${randomAnswer}</div>
     `;
     clearScreen();
     updateView();
