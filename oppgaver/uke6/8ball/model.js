@@ -18,9 +18,15 @@ const negativeAnswers = [
     'Very doubtful'
 ];
 var html = /*HTML*/`
-    <div id="ball">8-ball</div>
-    Ask Your question: <input type="text" onchange="question = this.value" /><br>
-    <button onclick="pickRandomAnswer()">Submit</button>
+<main>
+    <div class="content">
+	    	<a class="btn rgb-animate-hvr">8-ball</a>
+		</div>
+    <div class="content rgb-animate">			
+        Ask Your question: <input type="text" onchange="question = this.value" /><br>
+        <button onclick="pickRandomAnswer()">Submit</button>
+    </div>
+</main>
 `;
 var htmlAnswer = '';
 
