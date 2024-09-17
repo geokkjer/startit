@@ -1,0 +1,27 @@
+#body {
+    margin: 0;
+    display: grid;
+    background: rgb(91, 85, 200);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 56%);
+}
+#app{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+
+}
+.circles {
+    justify-items: stretch;
+    background-color: rgb(22, 2, 2);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.lightOn {
+    background-color: yellow;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
