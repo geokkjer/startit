@@ -28,12 +28,13 @@ let drowzee = {
   level: 33,
 };
 
+let bjarne = {
+  name: "Bjarne",
+  image: "Images/pokemonTrainerIdle.png",
+  pokemon: [],
+}
 let possiblePokemon = [pikachu, bulbasaur, oranguru, drowzee];
 let randomPokemon = null;
-
-let playerName = "Bjarne";
-let playerImage = "/Images/pokemonTrainerIdle.png";
-let playerPokemon = [];
 
 let app = document.getElementById("app");
 
@@ -41,6 +42,9 @@ updateView();
 
 function updateView() {
   getRandomPokemon()
+  // randomPokemon.level = Math.floor(Math.random() * 100)
+  // randomPokemon.health = Math.floor(Math.random() * 100)
+  // console.log(randomPokemon.level, randomPokemon.health);
   app.innerHTML = /*HTML*/ `
   <div class="container">
     <div class="opposingPokemon">
@@ -51,8 +55,8 @@ function updateView() {
     
     <div class="bottomScreen">
         <div class="player">
-            <img src="${playerImage}">
-            <div>${playerName}</div>
+            <img src="${bjarne.image}">
+            <div>${bjarne.name}</div>
         </div>
 
         <div class="buttonContainer">
@@ -66,10 +70,10 @@ function updateView() {
   `;
 }
 
-function caughtPokemonView(){
+function caughtPokemonView() {
   app.innerHTML = /*HTML*/`
   <div class="caughtContainer">
-    <h1>Du fanget ${playerPokemon[playerPokemon.length - 1].name}</h1>
+    <h1>Du fanget ${bjarne.pokemon[bjarne.pokemon.length - 1].name}</h1>
     <div class="buttonContainer">
               <button onclick="updateView()">Finn en annen</button>
               <button onclick="showPokemon()">Vis dine pokemon</button>
@@ -78,16 +82,30 @@ function caughtPokemonView(){
   `;
 }
 
-function catchPokemon(){
-  playerPokemon.push(randomPokemon);
+function catchPokemon() {
+  bjarne.pokemon.push(randomPokemon);
   caughtPokemonView();
 }
 
-function showPokemon(){
-  console.log(playerPokemon);
+function showPokemon() {
+  app.classList = '';
+  app.innerHTML = '';
+
+  for (i = 0; i < bjarne.pokemon.length; i++){
+    app.innerHTML += /*HTML*/ `
+    <table><tr><th>Navn</th><th>Level</th></tr>
+      <td>${bjarne.pokemon[i].name}</td><td>${bjarne.pokemon[i].level}</td></tr>
+      </table>
+  `;
+  }
+  app.innerHTML += /*HTML*/`
+  <div>
+    <button onclick="updateView()">Finn en annen</button>
+  </div>
+  `;
 }
 
-function getRandomPokemon(){
+function getRandomPokemon() {
   let randomNum = Math.floor(Math.random() * possiblePokemon.length);
   randomPokemon = possiblePokemon[randomNum];
 }

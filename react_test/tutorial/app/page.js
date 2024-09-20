@@ -6,8 +6,6 @@ function Header({ title }) {
 export default function HomePage() {
   const names = ['Ada Lovlace', 'Grace Hopper', 'Margaret Hamilton'];
 
-  
-
   return (
     <div>
       <Header title="Develop. Preview. Ship." />
