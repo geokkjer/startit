@@ -88,14 +88,13 @@ function catchPokemon() {
 }
 
 function showPokemon() {
-  app.classList = '';
+  app.style = null;
   app.innerHTML = '';
 
   for (i = 0; i < bjarne.pokemon.length; i++){
-    app.innerHTML += /*HTML*/ `
-    <table><tr><th>Navn</th><th>Level</th></tr>
-      <td>${bjarne.pokemon[i].name}</td><td>${bjarne.pokemon[i].level}</td></tr>
-      </table>
+    app.innerHTML = /*HTML*/ `
+    
+      <div>${bjarne.pokemon[i].name}</div>
   `;
   }
   app.innerHTML += /*HTML*/`
