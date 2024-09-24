@@ -15,3 +15,18 @@ for (let key in arrays) newArray = newArray.concat(arrays[key]);
 // }
 //reduceArrays();
 console.log(newArray2);
+
+function loop(value, testFunc, updateFunc, bodyFunc){
+    for (let i = 0; i < value; i++){
+        if (testFunc == false){
+            return 
+        } else {
+            // updateFunc(value)
+            
+            bodyFunc(value);
+        }
+        value--;
+    }
+    
+}
+loop(3, n => n > 0, n => n - 1, console.log);
