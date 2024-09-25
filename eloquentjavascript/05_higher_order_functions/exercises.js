@@ -21,7 +21,7 @@ function loop(value, testFunc, updateFunc, bodyFunc){
         if (testFunc == false){
             return 
         } else {
-            // updateFunc(value)
+            updateFunc(value)
             
             bodyFunc(value);
         }
