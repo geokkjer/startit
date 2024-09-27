@@ -1,8 +1,9 @@
 const model = {
     app: {
-        page: 'search'
+        pages: [],
+        page: 'search',
+        loggedInUserId: null,
     },
-
     inputs : {
         search: {
             text: '',
@@ -21,11 +22,8 @@ const model = {
             email: '',
         },
     },
-
     // felles data
     people: [
         { id: 1, name: 'Per', email: 'per@mail.com'},
-    ],
-
-    
+    ], 
 }
