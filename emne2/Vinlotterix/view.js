@@ -1,17 +1,18 @@
 
 function createMenu(){
     return /*html*/ `
-    <button onclick="updateViewHome()">Home</button>
+    <button onclick="updateViewHome()">Hjem</button>
     <button onclick="showWinnersView()">Trekk vinnere</button>
     <button onclick="updateViewRules()">Sett opp regler for trekningen</button>
-    <button onclick="updateViewList()">Vis tidligere trekkinger</button>
+    <button onclick="editList()">Legg til/fjern</button>
     <br/>
+    <hr>
     `;
 }
 
 function updateViewHome(){
     document.getElementById('app').innerHTML = /*HTML*/ `
-    <h1>Hello World!</h1>
+    <h1>Velkommen til Vinlotterix</h1>
     ${createMenu()}
     `;
 }
@@ -35,13 +36,13 @@ function updateViewRules(){
    
 }
 
-function updateViewList(){
+function editList(){
     let html = '';
     const employees = model.employees;
     for (let i = 0; i < employees.length; i++){
         const person = employees[i];
         html += /*html*/ `
-        <li>${person.name}</li>
+        <li>${person.id}${person.name}<button onclick="goToEditPage(${person.id})">Edit</button></li>
         `;
     }
     app.innerHTML = html + 'This is the list <button onclick="updateViewHome()">Home</button>'
@@ -50,15 +51,34 @@ function updateViewList(){
 function showWinnersView(){
     let winners = [];
     let num = model.input.rules.numWinners;
-
+    app.innerHTML = /*html*/ `<h1>Vinlotterix</h1><br> ${createMenu()}
+    <h3>Vinnere:</h3>
+    `;
     for (i = 0; i < num; i++){
         index = Math.floor(Math.random() * (model.employees.length));
-        console.log(index)
-        winners.push(model.employees[index])
+        winners.push(model.employees[index]);
     }
     for (i = 0; i < winners.length; i++){
         app.innerHTML += /*html*/ `
         <h4>${winners[i].name}</h4>
-    `; console.log(winners[i].name)}
+    `;}
     
+}
+
+function goToEditPage(id){
+    const person = model.employees[id];
+    let newPerson = '';
+    app.innerHTML = /*html*/ `
+        
+        <h1>Endre eller slett</h1><br> ${createMenu()}
+
+        Navn: <input value="${person.name}" onchange="newPerson=this.value" /><button onclick="changeList(${person.id}, newPerson)">Send inn</button><br>
+    `;
+    
+}
+
+function changeList(id,name){
+    console.log(id,name)
+    model.employees[id].name = name;
+    console.log(model.employees[id].name)
 }

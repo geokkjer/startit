@@ -11,12 +11,15 @@ const model = {
     },
     // Felles data
     employees: [
-        { id: 1, name: "Per" },
-        { id: 2, name: "Pål" },
-        { id: 3, name: "Espen" },
-        { id: 4, name: "Anita" },
-        { id: 5, name: "Kari" },
-        { id: 6, name: "Gry" }
+        { id: 0, name: "Per" },
+        { id: 1, name: "Pål" },
+        { id: 2, name: "Espen" },
+        { id: 3, name: "Anita" },
+        { id: 4, name: "Kari" },
+        { id: 5, name: "Gry" },
+        { id: 6, name: "Ole" },
+        { id: 7, name: "Hans" },
+        { id: 8, name: "Anna" },
+        { id: 9, name: "Anne" },
     ],
-
 }
