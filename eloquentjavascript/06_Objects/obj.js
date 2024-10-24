@@ -1,34 +1,44 @@
-function speak(line){
-    console.log(`The ${this.type} rabbit says '${line}'`)
+let empty = {};
+console.log(Object.getPrototypeOf({}) == Object.prototype);
+console.log(Object.getPrototypeOf(Object.prototype));
+
+console.log(Object.getPrototypeOf(Math.max) == Function.prototype);
+
+let protoRabbit = {
+    speak(line) {
+        console.log(`The ${this.type} rabbit says '${line}`)
+    }
+};
+
+let blackRabbit = Object.create(protoRabbit);
+blackRabbit.type = "black";
+blackRabbit.speak("I am fear and darkness");
+
+function makeRabbit(type){
+    let rabbit = Object.create(protoRabbit);
+    rabbit.type = type;
+    return rabbit;
+}
+class Rabbit {
+    constructor(type) {
+        this.type = type;
+    }
+    speak(line){
+        console.log(`The ${this.type} rabbit says '${line}`)
+    }
 }
 
-let whiteRabbit = {
-    type: "white", speak
-};
+let killerRabbit = new Rabbit("killer");
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium']
+console.log(materials.map((material) => material.includes('Helium')));
+let addABPlussHundred = (a,b) => a + b + 100;
+console.log(addABPlussHundred(10,19))
 
-let hungryRabbit = {
-    type: "hungry", speak
-};
-whiteRabbit.speak("Oh my fur and whiskers");
+const greetings = name => {
+    console.log(`Hello, ${name}!`);
+}
+greetings('Geir');
 
-hungryRabbit.speak("Got any carrots?");
+const myFunction = (param1,param2)  => {
 
-let finder = {
-    find(array){
-        return array.some(v => v == this.value)
-    },
-    value: 5
-};
-console.log(finder.find([4, 5]))
-const array = [1, 2, 3, 4, 5];
-
-// Checks whether an element is even
-const even = (element) => element % 2 === 0;
-
-console.log(array.some(even));
-
-let empty = {
-    name: "Geir",
-    age: 51,
-};
-console.log(empty.age.toLocaleString(), ++empty.age);
+}
