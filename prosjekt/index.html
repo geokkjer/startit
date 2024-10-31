@@ -4,45 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super cool project for homelabers</title>
+    <title>Book R Us</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <style>
-        div.page{
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            grid-template-rows: 20px 10fr 20px;
-            grid-template-areas: 
-            'menu header'
-            'menu mainView'
-            'menu footer';                  ;
-        }
-        div.header{
-            background-color: aquamarine;
-            grid-area: header;
-        }
-        div.menu{
-            background-color: grey;
-            grid-area: menu;
-        }
-        div.mainView{
-            background-color: whitesmoke;
-            grid-area: mainView;
-        }
-        div.footer{
-            background-color: black;
-            grid-area: footer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="controller.js"></script>
+    <script src="modell.js"></script>
+    <script src="view.js"></script>
+    <script type="text/javascript" src="helpers.js"></script>
 </head>
 
-<body>
-    <div class="page">
-        <div class="header">Header</div>
-        <div class="menu">Menu</div>
-        <div class="mainContent">MainContent</div>
-        <div class="footer">Footer</div>
+<body onload="updateView()">
+    <div id="app" class="app">
+        <div id="header" class="header">Header</div>
+        <div id="menu" class="menu">Menu</div>
+        <div id="mainView" class="mainView">MainContent</div>
+        <div id="footer" class="footer">Footer</div>
     </div>
+    <script></script>
 </body>
 
 </html>

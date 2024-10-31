@@ -1,0 +1,43 @@
+
+.app{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100px 10fr 20px;
+    grid-template-areas: 
+    'header header'
+    'menu mainView'
+    'footer footer';                  ;
+}
+.header{
+    background-color: rgb(78, 206, 163);
+    color: black;
+    height: auto;
+    grid-area: header;
+    /* justify-content: center; */
+}
+.header li {
+    float: left;
+    display: inline;
+    list-style-type: none;
+}
+.header li:hover {
+    background-color: #b35959;
+  }
+.header li input {
+    float: right;
+}
+.menu{
+    background-color: grey;
+    color: black;
+    grid-area: menu;
+}
+.mainView{
+    background-color: rgb(218, 131, 131);
+    color: black;
+    grid-area: mainView;
+}
+.footer{
+    background-color: black;
+    grid-area: footer;
+}
