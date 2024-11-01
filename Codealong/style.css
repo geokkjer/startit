@@ -1,0 +1,27 @@
+body {    
+    margin: 0;
+    background-image: url("bikes.webp");
+    background-color: chocolate;
+    overflow: hidden;
+}
+.header {
+    justify-content: center;
+    text-align: center;
+}
+.main {
+    align-content: center;
+    width: 50%;
+    border-radius: 25%;
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+.main li {
+    font-size: x-large;
+    list-style-type: none;
+}
+.input{
+    width: 50%;
+    background-color: antiquewhite;
+    text-align: center;
+}
