@@ -38,7 +38,7 @@ function addBikeview() {
         <input type="number" onchange="model.input.newBike.gears = this.value">
     </div>
     <div>
-    Er sykkelen tigjengelig<input type="checkbox" checked="checked" onclick="model.input.newBike.isAvailable = this.value">Ja</button>
+    Er sykkelen tigjengelig<input type="checkbox" checked="" onclick="model.input.newBike.isAvailable = this.value">Ja</button>
     <input type="checkbox" checked="" onclick="model.input.newBike.isAvailable = this.value">Nei</button>
     </div>
     <div>

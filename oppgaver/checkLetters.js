@@ -8,7 +8,6 @@ let string2 = "The quick brown fox jumps over the lazy dog"
 
 function isPangram(str) {
     const lowerStr = str.toLowerCase();
-
     if (letters.split('').every(char => lowerStr.includes(char))){
         console.log('ja')
         return true;
