@@ -10,6 +10,10 @@ internal class Program
         var number = GetNumber();
     }
 
+    static Main2(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+    }
  
     static int GetNumber()
     {
