@@ -12,3 +12,4 @@
 /home/geir/code/startit/Emne 3/test/obj/Debug/net6.0/test.pdb
 /home/geir/code/startit/Emne 3/test/obj/Debug/net6.0/test.genruntimeconfig.cache
 /home/geir/code/startit/Emne 3/test/obj/Debug/net6.0/ref/test.dll
+/home/geir/code/startit/Emne 3/test/obj/Debug/net6.0/test.csproj.AssemblyReference.cache

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eAulN7AMGw0=",
+  "dgSpecHash": "SNXMz0413TY=",
   "success": true,
   "projectFilePath": "/home/geir/code/startit/Emne 3/test/test.csproj",
-  "expectedPackageFiles": [
-    "/home/geir/.nuget/packages/microsoft.netcore.app.ref/6.0.35/microsoft.netcore.app.ref.6.0.35.nupkg.sha512",
-    "/home/geir/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.35/microsoft.aspnetcore.app.ref.6.0.35.nupkg.sha512",
-    "/home/geir/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.35/microsoft.netcore.app.host.linux-x64.6.0.35.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
