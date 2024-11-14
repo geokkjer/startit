@@ -2,23 +2,17 @@ namespace ConsoleApp2;
 
 public class NewClass
 {
-   private int tall = 1;
-   private float desimalTall = 1.0f;
-   double desimalTall2 = 1.01;
-   decimal desimalTall3 = 1.01M;
+   public static int nummer = 1;
+   public static long langt = 1234567890;
+   public static float flytende = 5.5f;
+   public static decimal desimal = 1.5m;
+   public static double dobbel = 1.5;
+   public static string streng = "Bokstaver og ord";
+   public static char karakter = 'A';
+   public static bool santUsant = false;
    
-   char bokstav = 'A';
-   string tekst = "Hei";
-   
-   bool santUsant = true; //eller false
-   
-   int[] tallArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-   string[] tekstArray = { "A", "B", "C", "D", "E" };
-   
-   List<int> ListeMedTall = new List<int>();
-
-   public int NumberFive()
+   public string NumberFive()
    {
-      return 5;
+      return "fem";
    }
 }
