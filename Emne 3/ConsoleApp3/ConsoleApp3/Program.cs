@@ -23,7 +23,7 @@
         public static void Run()
         {
             Console.WriteLine(sum());
-            Console.WriteLine(Sum(3,5));
+            Console.WriteLine(Sum(9,5));
         }
     }
 }
