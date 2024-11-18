@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krokodillespillet", "Krokodillespillet\Krokodillespillet.csproj", "{7A64F3FF-CB86-427B-A77E-320415991537}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A64F3FF-CB86-427B-A77E-320415991537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A64F3FF-CB86-427B-A77E-320415991537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A64F3FF-CB86-427B-A77E-320415991537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A64F3FF-CB86-427B-A77E-320415991537}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
