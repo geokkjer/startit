@@ -4,6 +4,7 @@ namespace KrokodilleSpillet
 {
     class Program
     {
+        static int poeng = 0;
         static bool running = true;
         static string rightAnswer; 
         static void Main(string[] args)
@@ -21,8 +22,9 @@ namespace KrokodilleSpillet
                 int randomNumber = rand1.Next(0,11);
                 int randomNumer2 = rand2.Next(0,11);
                
-                 Console.WriteLine("Skriv inn riktig > < eller =. Alle andre tegn avslutter programmet");
-                Console.WriteLine($"Hva er riktig tegn i utrykket {randomNumber}_{randomNumer2}");
+                Console.WriteLine("Skriv inn riktig > < eller =. Alle andre tegn avslutter programmet");
+                Console.WriteLine($"Du har {poeng} poeng");
+                Console.WriteLine($"Hva er riktig tegn i utrykket {randomNumber} _ {randomNumer2}");
                 string answer = Console.ReadLine();
                 GetRightAnswer(randomNumber, randomNumer2);
                 CheckAnswer(answer); 
@@ -53,11 +55,13 @@ namespace KrokodilleSpillet
             else if (answer == rightAnswer)
             {
                 PrintResponse(true);
+                poeng++;
                 Console.Clear();
 
             } else if(answer != rightAnswer)
             {
-                PrintResponse(false); 
+                PrintResponse(false);
+                poeng--;
                 Console.Clear();
             }
             
@@ -68,7 +72,7 @@ namespace KrokodilleSpillet
             if (arg == true)
             {
                 Console.WriteLine($"\nDet er riktig");
-                Console.WriteLine($"\nTrykk en tast for å prøve igjen");
+                Console.WriteLine($"\nTrykk en tast for å fortsette");
                 Console.ReadKey();
             }
             else
