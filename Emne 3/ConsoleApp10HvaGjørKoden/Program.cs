@@ -20,7 +20,7 @@ while (!string.IsNullOrWhiteSpace(text))
             var character = (char)i;
             var percentage = 100 * counts[i] / totalLetters ;
             // string output = counts[i]  + " - " + character + " - " + percentage + "%";
-            Console.WriteLine(String.Format("{0,0} - {1,1} - {2,2}%", counts[i], character, percentage));
+            Console.WriteLine(String.Format("{0,-3} - {1,1} - {2,2}%", counts[i], character, percentage));
         }
     }
 }
