@@ -20,13 +20,13 @@ namespace KrokodilleSpillet
                 var rand1 = new Random();
                 var rand2 = new Random();
                 int randomNumber = rand1.Next(0,11);
-                int randomNumer2 = rand2.Next(0,11);
+                int randomNumber2 = rand2.Next(0,11);
                
                 Console.WriteLine("Skriv inn riktig > < eller =. Alle andre tegn avslutter programmet");
                 Console.WriteLine($"Du har {poeng} poeng");
-                Console.WriteLine($"Hva er riktig tegn i utrykket {randomNumber} _ {randomNumer2}");
+                Console.WriteLine($"Hva er riktig tegn i utrykket {randomNumber} _ {randomNumber2}");
                 string answer = Console.ReadLine();
-                GetRightAnswer(randomNumber, randomNumer2);
+                GetRightAnswer(randomNumber, randomNumber2);
                 CheckAnswer(answer); 
             }
         }
