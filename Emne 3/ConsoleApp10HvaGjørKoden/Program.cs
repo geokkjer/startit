@@ -6,6 +6,7 @@ while (!string.IsNullOrWhiteSpace(text))
 {
     text = Console.ReadLine();
     Console.Clear();
+    Console.WriteLine(String.Format("{0,-6} - {1,-7} - {2,-7}", "Antall", "Bokstav", "Prosent"));
     foreach (var character in text.ToLower() ?? string.Empty)
     {
         totalLetters++;
@@ -20,7 +21,8 @@ while (!string.IsNullOrWhiteSpace(text))
             var character = (char)i;
             var percentage = 100 * counts[i] / totalLetters ;
             // string output = counts[i]  + " - " + character + " - " + percentage + "%";
-            Console.WriteLine(String.Format("{0,-3} - {1,1} - {2,2}%", counts[i], character, percentage));
+            
+            Console.WriteLine(String.Format("{0,-6} - {1,-7} - {2,-7}", counts[i], character, percentage + "%"));
         }
     }
 }
