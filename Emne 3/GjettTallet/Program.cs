@@ -17,9 +17,9 @@ namespace GjettTallet
                 var gjettetTallString = Console.ReadLine();
                 int gjettetTall;
                 int.TryParse(gjettetTallString, out gjettetTall);
-                if (gjettetTall == 0)
+                if (gjettetTall == 0 || gjettetTall > 100)
                 {
-                    størreEllerMindre = "Enten 0 eller ikke ett tall";
+                    størreEllerMindre = "Enten 0, over 100 eller ikke ett tall";
                     Console.Clear();
                 }
                 else if (tilfeldigTall == gjettetTall)
