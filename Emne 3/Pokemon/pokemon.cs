@@ -1,4 +1,4 @@
-namespace Pokemon;
+namespace Pokedex;
 
  public class Pikachu
 {
