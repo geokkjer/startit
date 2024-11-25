@@ -7,10 +7,10 @@ public class Person
     public int Age { get; set; }
     
     // Constructor
-    public Person(string firstName, string lastName, int Age)
+    public Person(string firstName, string lastName, int age)
     {
-        firstName = firstName;
-        lastName = lastName;
-        Age = Age;
+        FirstName = firstName;
+        LastName = lastName;
+        Age = age;
     }
 }
