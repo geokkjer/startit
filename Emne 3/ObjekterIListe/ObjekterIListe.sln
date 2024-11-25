@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjekterIListe", "ObjekterIListe\ObjekterIListe.csproj", "{F05F887B-9700-40F0-BB06-7B90A67E1057}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F05F887B-9700-40F0-BB06-7B90A67E1057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05F887B-9700-40F0-BB06-7B90A67E1057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05F887B-9700-40F0-BB06-7B90A67E1057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05F887B-9700-40F0-BB06-7B90A67E1057}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
