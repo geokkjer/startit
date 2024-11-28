@@ -1,11 +1,39 @@
 namespace BankAppMarie
-{
-    internal class Account
+{ 
+    public class Account
     {
-        int _balance;
+        private int _balance;
         string _accountName;
         bool _savingsAccount;
         string _accountNumber;
         string[] _accountTransactions;
+
+        public void DepositMoney(int amountToDeposit)
+        {
+            _balance += amountToDeposit;
+        }
+
+        public void Withdraw(int amountToWithdraw)
+        {
+            if (_balance >= amountToWithdraw)
+            {
+                _balance -= amountToWithdraw;
+            }
+            else
+            {
+                Console.WriteLine("Insufficient balance");
+            }
+        }
+
+        public Account(bool isSavingsAccount,string accountName)
+        {
+            _savingsAccount = isSavingsAccount;
+            _accountName = accountName;
+        }
+
+         public int GetAccountBalance()
+         {
+             return _balance;
+         }
     }
 }

@@ -12,3 +12,6 @@
 // Kunde
 // Regning
 
+using BankAppMarie;
+
+new Bank();
