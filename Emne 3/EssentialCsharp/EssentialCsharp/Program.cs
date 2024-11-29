@@ -2,16 +2,16 @@
 {
     public class Program
     {
-        public static void Main(string[] args)
-        {
-           bool ignoreCase = true;
-           string option = "/help";
-           
-           int comparison = string.Compare(option, "/Help", ignoreCase);
-           bool isHelpREquested = (comparison == 0);
-           Console.WriteLine($"Help Requested: {isHelpREquested}");
-           Console.WriteLine("\u0029");
-           Console.WriteLine(@"
+     public static void Main(string[] args)
+     {
+      bool ignoreCase = true;
+      string option = "/help";
+
+      int comparison = string.Compare(option, "/Help", ignoreCase);
+      bool isHelpREquested = (comparison == 0);
+      Console.WriteLine($"Help Requested: {isHelpREquested}");
+      Console.WriteLine("\u0029");
+      Console.WriteLine(@"
           
                                  ,        ,
                                 /(        )`
@@ -34,7 +34,8 @@
                            `--{__________)        \/ 
                 
 ");
-           Console.WriteLine(@"                                                                                                      
+      Console.WriteLine(
+       @"                                                                                                      
                                                                                                       
                                                                                                       
                                                                                                       
@@ -75,26 +76,49 @@
                       ███                                                                             
                                                                                                       
 ");
-           string name = "mobius";
-           Console.Write(
-            $$"""
-              Begin
-                         ____
-                        /   /\
-                       /   /  \
-                      /   /   /\
-                     /   /   /  \
-                    /   /   /\   \
-                   /   /   /  \   \
-                  /   /   /\   \   \
-                 /   /   /  \   \   \
-                /___/___/____\   \   \
-               /     {{{name}}} \   \   \
-              /________________\   \   \
-              \                 \   \  /
-               \_________________\___\/
-              End
-              """);
-        }
+      string name = "mobius";
+      Console.Write(
+       $$"""
+         Begin
+                    ____
+                   /   /\
+                  /   /  \
+                 /   /   /\
+                /   /   /  \
+               /   /   /\   \
+              /   /   /  \   \
+             /   /   /\   \   \
+            /   /   /  \   \   \
+           /___/___/____\   \   \
+          /     {{{name}}} \   \   \
+         /________________\   \   \
+         \                 \   \  /
+          \_________________\___\/
+         End
+         """);
+      string mamaSaid = // Multi-line raw string literal.
+       """
+       Mama said, "Life was just a box of chocolates..."
+       """;
+      string jsonDialogue = $$"""
+                                                                 {
+                                                                 "quote": {
+                                                                      "character": "The MAN",
+                                                                      "dialogue": ""
+                                                                      },
+                                                                      "description": "She nods, not much interested. He...",
+                                                                      "quote": {
+                                                                      "character": "The MAN",
+                                                                      "dialogue": ""
+                                                                      },
+                                                                      "description": "She shakes \"no\" He unwraps it...",
+                                                                      "quote": {
+                                                                      "character": "The MAN",
+                                                                      "dialogue": "{{mamaSaid.Replace("\"", "\\\"")}}"
+                                                                }
+     }
+     """;
+      Console.WriteLine(jsonDialogue);
+    }
     }
 }
