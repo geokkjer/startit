@@ -4,10 +4,13 @@
     {
         public static void Main(string[] args)
         {
-            string name;
-            Console.WriteLine("Enter Your name: ");
-            name = Console.ReadLine();
-            Console.WriteLine($"Hello {name}!");           
+           bool ignoreCase = true;
+           string option = "/help";
+           
+           int comparison = string.Compare(option, "/Help", ignoreCase);
+           bool isHelpREquested = (comparison == 0);
+           Console.WriteLine($"Help Requested: {isHelpREquested}");
+           Console.WriteLine("\u0029");
         }
     }
 }
