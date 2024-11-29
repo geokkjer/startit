@@ -96,29 +96,15 @@
           \_________________\___\/
          End
          """);
-      string mamaSaid = // Multi-line raw string literal.
-       """
-       Mama said, "Life was just a box of chocolates..."
-       """;
-      string jsonDialogue = $$"""
-                                                                 {
-                                                                 "quote": {
-                                                                      "character": "The MAN",
-                                                                      "dialogue": ""
-                                                                      },
-                                                                      "description": "She nods, not much interested. He...",
-                                                                      "quote": {
-                                                                      "character": "The MAN",
-                                                                      "dialogue": ""
-                                                                      },
-                                                                      "description": "She shakes \"no\" He unwraps it...",
-                                                                      "quote": {
-                                                                      "character": "The MAN",
-                                                                      "dialogue": "{{mamaSaid.Replace("\"", "\\\"")}}"
-                                                                }
-     }
-     """;
-      Console.WriteLine(jsonDialogue);
+      
+      long longNumber = 50918309109;
+      int intNumber = (int)longNumber;
+      long n = long.MaxValue;
+      int i = int.MaxValue;
+      Console.WriteLine($"\n{longNumber.ToString()}, {intNumber.ToString()}, {n.ToString()}, {i.ToString()}");
+      Console.WriteLine("\nPress any key to continue...");
+      Console.ReadKey();
+   
     }
     }
 }
