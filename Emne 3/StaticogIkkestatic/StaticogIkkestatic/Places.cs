@@ -2,10 +2,16 @@ namespace StaticogIkkestatic;
 
 public class Places
 {
-    public string PlaceName;
-    public string Municipality;
-    public string Region;
-    
+    public string PlaceName { get; private set; }
+    public string Municipality{ get; private set; }
+    public string Region{ get; private set; }
+
+    public Places(string placeName, string municipality, string region)
+    {
+        PlaceName = placeName;
+        Municipality = municipality;
+        Region = region;
+    }
     public void ShowPlace()
     {
         var labelWidth = 8;
