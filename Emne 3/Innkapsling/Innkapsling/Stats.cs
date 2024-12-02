@@ -1,29 +1,16 @@
 namespace Innkapsling;
 
-public class Stats
+internal class Stats
 {
-    private int[] _numbers;
-    private int _numberCount;
+    public int NumberCount { get;  private set; }
+    public int Sum { get; private set; }
 
-    public Stats()
-    {
-        _numbers = new int[10];
-    }
-
+    public float Mean => (float)Sum / NumberCount;
+    
     public void AddNumber(int number)
     {
-      _numbers[_numberCount] = number;
-      _numberCount++;  
+        Sum += number;
+        NumberCount++;
     }
 
-    public void Show()
-    {
-        var sum = _numbers.Sum();
-        Console.Clear();
-        Console.WriteLine(
-            $"Antall tall: {_numberCount} " +
-            $"Sum: {sum} " +
-            $"Snitt: {(float)sum / _numberCount}"
-            );
-    }
 }

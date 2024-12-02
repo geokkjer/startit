@@ -10,6 +10,11 @@ while (true)
      
     var number = Convert.ToInt32(numberStr);
     stats.AddNumber(number);
-    stats.Show();
+    Console.Clear();
+    Console.WriteLine(
+        $"Antall tall: {stats.NumberCount} " + 
+        $"Sum: {stats.Sum} " + 
+        $"Snitt: {stats.Mean}"
+        );
     
 }
