@@ -1,6 +1,7 @@
 ﻿
-var numbers = new int[100];
-var numberCount = 0;
+using Innkapsling;
+
+var stats = new Stats();
 while (true)
 {
     Console.WriteLine("Skriv et tall (eller blankt for å avslutte: ");
@@ -8,13 +9,7 @@ while (true)
     if (string.IsNullOrWhiteSpace(numberStr)) break;
      
     var number = Convert.ToInt32(numberStr);
-    numbers[numberCount] = number;
-    numberCount++;
-    var sum = numbers.Sum();
-      Console.Clear();
-    Console.WriteLine(
-        $"Antall tall: {numberCount} " +
-        $"Sum: {sum} " +
-        $"Snitt: {(float)sum / numberCount}"
-        );
+    stats.AddNumber(number);
+    stats.Show();
+    
 }
