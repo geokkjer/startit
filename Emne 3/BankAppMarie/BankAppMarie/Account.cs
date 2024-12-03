@@ -6,7 +6,7 @@ namespace BankAppMarie
         string _accountName;
         bool _savingsAccount;
         string _accountNumber;
-        string[] _accountTransactions;
+        List<string> _accountTransactions;
 
         public void DepositMoney(int amountToDeposit)
         {
@@ -20,7 +20,7 @@ namespace BankAppMarie
                 _balance -= amountToWithdraw;
             }
             else
-            {
+            { 
                 Console.WriteLine("Insufficient balance");
             }
         }

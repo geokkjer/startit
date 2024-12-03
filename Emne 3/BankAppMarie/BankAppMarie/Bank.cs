@@ -6,7 +6,7 @@ namespace BankAppMarie
 
         public Bank()
         {
-            _currentCustomer = new Customer("Kåre Knutsen");
+            _currentCustomer = new Customer("Kåre Knutsen", true);
             BankMenu();
         }
         void BankMenu()
@@ -14,6 +14,7 @@ namespace BankAppMarie
             var isRunning = true;
             while (isRunning)
             {
+                Console.Clear();
                 Console.WriteLine($"Welcome to the Bank app, {_currentCustomer.GetCustomerName()}!");
                 Console.WriteLine("1. Deposit Money");
                 Console.WriteLine("2. Withdraw Money");
@@ -39,6 +40,7 @@ namespace BankAppMarie
                         _currentCustomer.WithdrawMoney(userInputInt, true);
                         break;
                     case "3":
+                        _currentCustomer.PrintBills();
                         break;
                     case "4":
                         break;
@@ -52,5 +54,7 @@ namespace BankAppMarie
                 }
             }
         }
+
+        
     }
 }
