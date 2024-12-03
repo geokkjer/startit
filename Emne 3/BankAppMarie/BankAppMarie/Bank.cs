@@ -47,6 +47,7 @@ namespace BankAppMarie
                     case "5":
                         var accountBalance = _currentCustomer.GetAccountBalance();
                         Console.WriteLine($"{accountBalance}");
+                        Console.ReadLine();
                         break;
                     case "6":
                         isRunning = false;

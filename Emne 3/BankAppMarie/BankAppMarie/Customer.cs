@@ -57,17 +57,15 @@ namespace BankAppMarie
         }
         public void PrintBills()
         {
-            var billNr = 1;
+           
             Console.Clear();
             foreach (Bill bill in _bills)
             {
-                Console.WriteLine($"{billNr}.) KidNr: {bill.KidNr} Amount: {bill.Amount}DueDate: {bill.PayDate}");
-                billNr++;
-                
+                Console.WriteLine($"Id: {bill.Id}.) KidNr: {bill.KidNr} Amount: {bill.Amount}DueDate: {bill.PayDate.ToShortDateString()}");
             }
-            Console.WriteLine("Please selcet bill id:");
-            var menuChoice = Convert.ToInt32(Console.ReadLine());
-            
+            Console.WriteLine("Please selcet bill id to pay:");
+            var billId = int.Parse(Console.ReadLine());
+            PayBill(billId);
         }
 
         public void PayBill(int billId)
@@ -75,11 +73,12 @@ namespace BankAppMarie
             var bill = GetBill(billId);
             _currentAccount.Withdraw(bill.Amount);
             _bills.Remove(bill);
+            _currentAccount.AddNewTransaction("Paid bill " + bill.KidNr);
         }
 
         public Bill GetBill(int billId)
         {
-            Bill foundBill = _bills.First(bill => bill.CustomerId == billId);
+            Bill foundBill = _bills.First(bill => bill.Id == billId);
             return foundBill;
         }
     }

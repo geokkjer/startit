@@ -29,6 +29,15 @@ namespace BankAppMarie
         {
             _savingsAccount = isSavingsAccount;
             _accountName = accountName;
+            _balance = 10000;
+            _accountTransactions = new List<string>();
+            _accountNumber = new Guid().ToString();
+        }
+
+        public void AddNewTransaction(string transactionText)
+        {
+            _accountTransactions.Add(transactionText);
+            Console.WriteLine("Added: " + transactionText);
         }
 
          public int GetAccountBalance()
