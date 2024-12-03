@@ -9,5 +9,6 @@ mkShell {
       sdk_9_0
     ])
     csharp-ls
+    avalonia
   ];
 }
