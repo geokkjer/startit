@@ -6,32 +6,8 @@
 */
 using CodeAlong0412;
 
-var dish1 = new Dish("Bread", "Loff", ["Mel","Vann","Smør"]);
-var dish2 = new Dish("Grøt","Rømmegrøt",["Ris","Rømme","Melk","Smør"]);
-var dishList = {dish1, dish2};
+new App();
 
 
-var running = true;
 
-while (running)
-{
-   Console.Clear();
-   Console.WriteLine("Welcome to the Dishshower!!");
-   Console.WriteLine("1. Dish List");
-   var input = Console.ReadLine();
-   switch(input)
-   {
-      case "1":
-         foreach (var dish in dishList)
-         {
-           Console.WriteLine(dish.NameOfDish);
-         }
-         Console.WriteLine();
-         break;
-      case "2":
-         //var input = Console.ReadLine();
-         //SearchIngredients();
-         break;
-   }
-}
 

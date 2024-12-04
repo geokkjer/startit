@@ -11,7 +11,7 @@ public class Dish
     {
         NameOfDish = name;
         DescriptionOfDish = description;
-        this.Ingredients = ingredients;
+        Ingredients = ingredients;
     }
 
     public void ShowDish()
@@ -32,5 +32,4 @@ public class Dish
     
     
 }
-
 // search
