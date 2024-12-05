@@ -41,9 +41,9 @@ public class App
         {
            Console.Clear();
            Console.WriteLine("Velkommen til Oppskrifts appen: ");
-           Console.WriteLine("1. Vis liste over alle oppskriftene");
-           Console.WriteLine("2. Søk på ingrediens");
-           Console.WriteLine("3. Søk på kategori");
+           Console.WriteLine("1.) Vis liste over alle oppskriftene:");
+           Console.WriteLine("2.) Filtrer på kategori");
+           Console.WriteLine("3.) Filtrer på ingrdiensene");
            Console.WriteLine("q. for å avslutte");
            
            
@@ -53,11 +53,11 @@ public class App
               case "1": 
                   ShowDishNamesMenu(); 
                   break;
-              case "2": 
-                  ShowDishByIngredientsMenu();
+              case "2":
+                  ShowDishCategoryMenu();
                   break;
               case "3":
-                  ShowDishByCategoryMenu();
+                  ShowIngredientsMenu();
                   break;
               case "q":
                  running = false;
@@ -90,7 +90,39 @@ public class App
         var thisDish = Dish.FirstOrDefault(d => d.DishId == id); 
         Console.WriteLine($"Navn: {thisDish.NameOfDish}\nBeskrivelse: {thisDish.DescriptionOfDish}"); 
         Console.ReadLine();
-    } 
+    }
+
+    public void ShowIngredientsMenu()
+    {
+        Console.Clear();
+        Console.WriteLine("Filtrer basert på ingrediens: ");
+        var search = Console.ReadLine();
+        var dishes = Dish.Where(d => d.Ingredients.Contains(search));
+        Console.WriteLine($"Retter med {search}");
+        foreach (var dish in dishes)
+        {
+            Console.WriteLine($"{dish.NameOfDish} - {dish.DescriptionOfDish}");
+        }
+        Console.WriteLine("Trykk for å gå tilbake");
+        Console.ReadKey();
+
+    }
+
+    void ShowDishCategoryMenu()
+    {
+           Console.Clear();
+           Console.WriteLine("Filtre basert på kategori: ");
+           Console.WriteLine("Kategorier: Middag - Forkost - Lunsj - Dessert - Bakverk");
+           var input = Console.ReadLine();
+           var dish = Dish.Where(d => d.Categories.Contains(input));
+           Console.WriteLine($"Retter i {input} kategorien");
+           foreach (var d in dish)
+           {
+               Console.WriteLine($"{d.NameOfDish} - {d.DescriptionOfDish}");
+           }
+
+           Console.ReadKey();
+    }
     
 }
 

@@ -32,7 +32,7 @@ public class Dish
         } ;
         return items;
     }
-    public void ShowDishByIngredientsMenu()
+    public void ShowDishByIngredients()
     {
         Console.Clear();
         Console.WriteLine("Tilgjengelige ingredienter: ");
