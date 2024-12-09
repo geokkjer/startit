@@ -20,4 +20,6 @@
 // PokeGym
   // GymTrainer
 
+using PokemonMarie;
 
+new PokemonWorld();

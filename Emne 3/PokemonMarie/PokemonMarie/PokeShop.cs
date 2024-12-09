@@ -1,6 +1,6 @@
 namespace PokemonMarie;
 
-public class PokeShop
+internal class PokeShop
 {
-    
+    public List<string> StoreInventory { get; private set; }
 }

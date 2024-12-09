@@ -1,6 +1,7 @@
 namespace PokemonMarie;
 
-public class PokeGym
+internal class PokeGym 
 {
+    public Trainer GymTrainer { get; private set; }
     
 }

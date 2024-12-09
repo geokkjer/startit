@@ -1,8 +1,29 @@
 namespace PokemonMarie;
 
-public class Pokemon
+internal class Pokemon
 {
-    int Levet { get; set; }
-    string Type { get; set; }
-    string Name { get; set; }
+    public int Level { get; private set; }
+    public string Type { get; private set; }
+    public string Name { get; private set; }
+    public int Health { get; private set; }
+    public int Strength { get; private set; }
+
+    public Pokemon(int level, string name, string type, int health, int strength)
+    {
+        Level = level;
+        Name = name;
+        Type = type;
+        Health = health;
+        Strength = strength;
+    }
+
+    public void Fight(Pokemon opponent)
+    {
+        opponent.LooseHealth(Strength); 
+    }
+
+    public void LooseHealth(int strength)
+    {
+        Health -= strength;
+    }
 }
