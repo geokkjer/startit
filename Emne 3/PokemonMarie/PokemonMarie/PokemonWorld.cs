@@ -10,15 +10,15 @@ internal class PokemonWorld
 
     public PokemonWorld()
     {
-        MyTrainer = new Trainer(this, , , "Ash");
+        MyTrainer = new Trainer( "Ash", this);
         WildPokemons = new List<Pokemon>()
         {
-            new Pokemon(11,"Lucario", "Grass",100,100), 
-            new Pokemon(12,"Bulbasaur", "Grass",100,100),
-            new Pokemon(13,"Gyarados", "Water",100,100),
-            new Pokemon(14,"Oshawott", "Water",100,100),
-            new Pokemon(15,"Grimer", "Mud",100,100),
-            new Pokemon(16,"Diglett", "Mud",100,100),
+            new Pokemon("Lucario", "Grass"), 
+            new Pokemon("Bulbasaur", "Grass"),
+            new Pokemon("Gyarados", "Water"),
+            new Pokemon("Oshawott", "Water"),
+            new Pokemon("Grimer", "Mud"),
+            new Pokemon("Diglett", "Mud"),
         };
         Menu();
     }

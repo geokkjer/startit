@@ -7,11 +7,11 @@ internal class Trainer
     public Pokemon StartPokemon { get; private set; }
     public string Name { get; private set; }
 
-    public Trainer(PokemonWorld myWorld, List<string> inventory, Pokemon startPokemon, string name)
+    public Trainer(string name, PokemonWorld myWorld)
     {
         MyWorld = myWorld;
         Inventory = new List<string>();
-        StartPokemon = new Pokemon(11,"Pikachu", "Lightning",100,100);
+        StartPokemon = new Pokemon("Pikachu", "Lightning");
         Name = name;
     }
 

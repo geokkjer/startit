@@ -8,13 +8,10 @@ internal class Pokemon
     public int Health { get; private set; }
     public int Strength { get; private set; }
 
-    public Pokemon(int level, string name, string type, int health, int strength)
+    public Pokemon(string name, string type)
     {
-        Level = level;
         Name = name;
         Type = type;
-        Health = health;
-        Strength = strength;
     }
 
     public void Fight(Pokemon opponent)
