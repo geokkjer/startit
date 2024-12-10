@@ -1,0 +1,6 @@
+@APITerje_HostAddress = http://localhost:5253
+
+GET {{APITerje_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
