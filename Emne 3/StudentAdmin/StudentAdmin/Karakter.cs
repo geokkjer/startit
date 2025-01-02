@@ -16,9 +16,9 @@ internal class Karakter
     public void SkrivUtInfo(Karakter karakter)
     {
         Console.WriteLine(
-                          $"Student: {karakter.Student}\n" +
-                          $"Fag: {karakter.Fag}" +
-                          $"Karakter: {karakter.KarakterVerdi}\n" 
-                          );
+            $"Student: {karakter.Student}\n" +
+            $"Fag: {karakter.Fag}" +
+            $"Karakter: {karakter.KarakterVerdi}\n"
+        );
     }
 }
