@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StigespilletTDD", "StigespilletTDD\StigespilletTDD.csproj", "{EA04112E-4F91-4EFF-98A6-09C05202F318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StigespilletTDD.test", "StigespilletTDD.test\StigespilletTDD.test.csproj", "{BCE58F6B-442E-4977-A26E-10E39AE516BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA04112E-4F91-4EFF-98A6-09C05202F318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA04112E-4F91-4EFF-98A6-09C05202F318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA04112E-4F91-4EFF-98A6-09C05202F318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA04112E-4F91-4EFF-98A6-09C05202F318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE58F6B-442E-4977-A26E-10E39AE516BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE58F6B-442E-4977-A26E-10E39AE516BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE58F6B-442E-4977-A26E-10E39AE516BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE58F6B-442E-4977-A26E-10E39AE516BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
