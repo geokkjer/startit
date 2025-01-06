@@ -1,15 +1,16 @@
 ﻿using IntroInterface;
 
- var questions = new ???[]
+ var questions = new IQuestion[]
  {
-    new SimpleAnswerQuestion("Hva er 2+2?", "4"),
-        new MultipleChoiceQuestions("Hva er hovedstaden i Norge?", 3,"Stavern", "Larvik","Oslo"),
+    new SingleAnswerQuestion("Hva er 2+2?", "4"),
+    new MultipleChoiceQuestions("Hva er hovedstaden i Norge?", 3,"Stavern", "Larvik","Oslo"),
  };
  
  var points = 0;
  foreach (var question in questions)
  {
      var isCorrect = question.Run();
+     
      if (isCorrect)
      {
          Console.WriteLine("Riktig!");

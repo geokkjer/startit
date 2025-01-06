@@ -1,11 +1,11 @@
 namespace IntroInterface;
 
-public class SimpleAnswerQuestion
+public class SingleAnswerQuestion: IQuestion
 {
     private readonly string _question;
     private readonly string _correctanswer;
 
-    public SimpleAnswerQuestion(string question, string correctanswer)
+    public SingleAnswerQuestion(string question, string correctanswer)
     {
         _correctanswer = correctanswer;
         _question = question;

@@ -1,6 +1,6 @@
 namespace IntroInterface;
 
-public class MultipleChoiceQuestions
+public class MultipleChoiceQuestions: IQuestion
 {
     private readonly string _question;
     private readonly string[] _answers;
@@ -23,5 +23,9 @@ public class MultipleChoiceQuestions
             var answer = _answers[i];
             Console.WriteLine(answerNo + ": " + answer);
         }
+        Console.WriteLine("Velg Svaralternativ: ");
+        var selectedAnswerNoStr = Console.ReadLine();
+        var selectedAnswerNo = Convert.ToInt32(selectedAnswerNoStr);
+        return selectedAnswerNo == _correctAnswerNo;
     }
 }
