@@ -1,4 +1,4 @@
-namespace DependencyInversionPrinciple;
+namespace DIP.ChatServer;
 
 public class ChatServer
 {
