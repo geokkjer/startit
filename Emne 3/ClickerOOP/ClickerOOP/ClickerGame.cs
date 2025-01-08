@@ -1,55 +1,30 @@
 namespace ClickerOOP;
 
-public class ClickerGame : ICommand
-{ 
- public int Points {get; private set;}
- public int PointsPerClick {get; private set;}
- public int PointsPerClickIncrease {get; private set;}
-
- public ClickerGame(int points, int pointsPerClick, int pointsPerClickIncrease)
+public class ClickerGame
+{
+ public int Points { get; private set; } = 0;
+ private int _pointsPerClick = 1;
+ private int _pointsPerClickIncrease = 1; 
+ public void Click()
  {
-  Points = points;
-  PointsPerClick = pointsPerClick;
-  PointsPerClickIncrease = pointsPerClickIncrease;
+  Points += _pointsPerClick;
  }
 
- public void Run()
+ public void Upgrade()
  {
-  while (true)
-  {
-   Console.Clear();
-   Console.WriteLine("Kommandoer:\r\n" +
-                     "- SPACE = klikk (og få poeng)\r\n" +
-                     "- K = kjøp oppgradering \r\nØker poeng per klikk koster 10 poeng\r\n" +
-                     "- S = kjøp superoppgradering øker \"poeng per klikk\" for den vanlige oppgraderingen. koster 100 poeng\r\n" +
-                     "- X = avslutt applikasjonen");
-   Console.WriteLine($"Du har {Points} poeng.");
-   Console.WriteLine("Trykk tast for ønsket kommando.");
-   var command = Console.ReadKey().KeyChar;
-   if (command == 'x'){  Exit(); }
-   else if (command == ' ') { Click(); }
-   else if (command == 'k' && Points >= 10) { Upgrade(); }
-   else if (command == 's' && Points >= 100) { SuperUpgrade(); } }
- }
- void Click()
- {
-  Points += PointsPerClick;
- }
- void Upgrade()
- {
+  if(Points < 10) return;
   Points -= 10;
-  PointsPerClick += PointsPerClickIncrease;
+  _pointsPerClick += _pointsPerClickIncrease;
+  
  }
 
- void SuperUpgrade()
+ public void SuperUpgrade()
  {
+  if (Points < 100) return;
   Points -= 100;
-  PointsPerClickIncrease++;
+  _pointsPerClickIncrease++;
  }
- void Exit()
- {
-  Environment.Exit(0); 
- }
+ 
  
  
 }
