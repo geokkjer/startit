@@ -2,14 +2,14 @@ namespace DIP.ChatServer;
 
 public class ChatServer
 {
-  private readonly List<ChatClient> _clients;
+  private readonly List<IChatClient> _clients;
 
   public ChatServer()
   {
-    _clients = new List<ChatClient>();
+    _clients = new List<IChatClient>();
   }
 
-  public void Broadcast(ChatClient client, string message)
+  public void Broadcast(IChatClient client, string message)
   {
     foreach (var chatClient in _clients)
     {
@@ -21,7 +21,7 @@ public class ChatServer
     }
   }
 
-  public void Register(ChatClient client)
+  public void Register(IChatClient client)
   {
     _clients.Add(client);
   }

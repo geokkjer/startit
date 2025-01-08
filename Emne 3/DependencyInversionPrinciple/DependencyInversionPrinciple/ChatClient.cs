@@ -1,6 +1,7 @@
 namespace DependencyInversionPrinciple;
+using DIP.ChatServer;
 
-public class ChatClient
+public class ChatClient : IChatClient
 {
     private readonly string _name;
     private readonly ChatServer _server;
