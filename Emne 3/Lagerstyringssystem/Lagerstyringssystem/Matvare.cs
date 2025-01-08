@@ -6,9 +6,16 @@ public class Matvare: IProdukt
 
     public double Pris { get; set; }
     public DateTime Utløpsdato { get; set; }
-    
+
+    public Matvare(string navn, double pris, DateTime utløpsdato)
+    {
+        Navn = navn;
+        Pris = pris;
+        Utløpsdato = utløpsdato;
+    }
+
     public void SkrivUtInfo()
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Navn: {this.Navn}\nPris: {Pris}\nUtløpsdato: {Utløpsdato}"); 
     }
 }

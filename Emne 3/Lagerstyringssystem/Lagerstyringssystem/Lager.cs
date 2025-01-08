@@ -2,21 +2,26 @@ namespace Lagerstyringssystem;
 
 public class Lager
 {
-    List<IProdukt> Inventar { get; set; }
+    public Lager(List<IProdukt> inventar)
+    {
+        Inventar = inventar;
+    }
 
-    void Add(IProdukt produkt)
+    public List<IProdukt> Inventar { get; set; }
+
+    public void Add(IProdukt produkt)
     {
         Inventar.Add(produkt);
     }
 
-    void Remove(IProdukt produkt)
+    public void Remove(IProdukt produkt)
     {
         Inventar.Remove(produkt);
     }
 
-    void ListAll(List<IProdukt> inventar)
+    public void ListAll()
     {
-        foreach (IProdukt produkt in inventar)
+        foreach (IProdukt produkt in Inventar)
         {
             produkt.SkrivUtInfo();
         }
